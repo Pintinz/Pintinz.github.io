@@ -3,25 +3,120 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CareerOS</title>
-  <meta name="description" content="CareerOS: find jobs, internships, graduate programmes and scholarships, prepare for interviews and track your applications.">
-  <style>
-    :root { --ink: #0F172A; --slate: #475569; --blue: #1D5FD1; --bg: #F5F7FB; }
-    * { box-sizing: border-box; }
-    body { margin: 0; font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif; background: var(--bg); color: var(--ink); }
-    main { max-width: 640px; margin: 0 auto; padding: 72px 20px; }
-    h1 { font-size: 40px; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 12px; }
-    p { color: var(--slate); font-size: 18px; line-height: 1.6; margin: 0 0 28px; }
-    a.button { display: inline-block; background: var(--blue); color: #fff; text-decoration: none; font-weight: 600; padding: 14px 22px; border-radius: 12px; }
-    footer { margin-top: 56px; font-size: 14px; color: var(--slate); }
-  </style>
+  <title>CareerOS: Jobs & Career Prep</title>
+  <meta name="description" content="Find jobs, internships, graduate programmes and scholarships. Practise interviews, improve your CV and track every application in one place.">
+  <link rel="icon" href="assets/careeros-symbol.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="./"><img src="assets/careeros-wordmark.png" alt="CareerOS"></a>
+      <nav class="nav">
+        <a href="#features">Features</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
+  </header>
+
   <main>
-    <h1>CareerOS</h1>
-    <p>Find jobs, internships, graduate programmes and scholarships. Prepare for interviews, improve your CV and track every application in one place.</p>
-    <a class="button" href="https://play.google.com/store/apps/details?id=com.careeros.careeros">Get it on Google Play</a>
-    <footer>&copy; 2026 CareerOS</footer>
+    <section class="hero">
+      <div class="wrap">
+        <div>
+          <h1>Your next opportunity starts here.</h1>
+          <p>Find jobs, internships, graduate programmes and scholarships. Practise interviews, improve your CV and keep every application on track.</p>
+          <a class="button light" href="https://play.google.com/store/apps/details?id=com.careeros.careeros">Get it on Google Play</a>
+          <p class="note">Free to download. Android.</p>
+        </div>
+        <div class="hero-shot">
+          <div class="phone"><img src="assets/screen-home.webp" alt="CareerOS home screen with applications, interviews and suggested jobs" width="390" height="844"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="wrap">
+        <h2 class="section-title">Everything for your career, in one app</h2>
+        <p class="section-lead">CareerOS brings opportunities, preparation and tracking together, so you spend less time searching and more time getting ready.</p>
+        <div class="features">
+          <div class="feature">
+            <div class="icon">01</div>
+            <h3>Opportunities from official sources</h3>
+            <p>Jobs, internships, graduate programmes and scholarships, gathered from employers' own career sites and checked regularly.</p>
+          </div>
+          <div class="feature">
+            <div class="icon">02</div>
+            <h3>Practise interviews</h3>
+            <p>Question banks, timed mock interviews, STAR answer coaching and an AI interviewer that asks realistic follow-up questions.</p>
+          </div>
+          <div class="feature">
+            <div class="icon">03</div>
+            <h3>CV and ATS checks</h3>
+            <p>See how your CV reads against a job description, and what to improve before you apply.</p>
+          </div>
+          <div class="feature">
+            <div class="icon">04</div>
+            <h3>Track every application</h3>
+            <p>Keep stages, interviews and deadlines in one place, with reminders so nothing slips.</p>
+          </div>
+          <div class="feature">
+            <div class="icon">05</div>
+            <h3>Career Intelligence</h3>
+            <p>Career paths, in-demand skills and company news, measured from real listings, never guessed.</p>
+          </div>
+          <div class="feature">
+            <div class="icon">06</div>
+            <h3>Communities</h3>
+            <p>Join communities for companies, industries and roles, and learn from people on the same path.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="showcase">
+      <div class="wrap">
+        <h2 class="section-title">Built for the way you search</h2>
+        <div class="screens">
+          <figure>
+            <div class="phone full"><img src="assets/screen-opportunities.webp" alt="Opportunities screen listing jobs" width="390" height="844" loading="lazy"></div>
+            <figcaption>Opportunities</figcaption>
+          </figure>
+          <figure>
+            <div class="phone full"><img src="assets/screen-home.webp" alt="Home screen" width="390" height="844" loading="lazy"></div>
+            <figcaption>Your career, at a glance</figcaption>
+          </figure>
+          <figure>
+            <div class="phone full"><img src="assets/screen-intelligence.webp" alt="Career Intelligence screen" width="390" height="844" loading="lazy"></div>
+            <figcaption>Career Intelligence</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap">
+        <h2 class="section-title">Start building your career today</h2>
+        <p class="section-lead">Download CareerOS free on Google Play.</p>
+        <a class="button" href="https://play.google.com/store/apps/details?id=com.careeros.careeros">Get it on Google Play</a>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <img src="assets/careeros-wordmark-on-dark.png" alt="CareerOS">
+      <nav>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms and Conditions</a>
+        <a href="refund.html">Refund Policy</a>
+        <a href="mailto:careeros.info@gmail.com">Contact</a>
+      </nav>
+      <span>&copy; 2026 CareerOS</span>
+    </div>
+  </footer>
 </body>
 </html>
