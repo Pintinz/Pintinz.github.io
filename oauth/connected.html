@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>CareerOS</title>
+  <link rel="icon" href="../assets/careeros-symbol.png">
+  <style>
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #F5F7FB; color: #475569;
+      font-family: "Inter Tight", system-ui, -apple-system, "Segoe UI", sans-serif; padding: 20px; }
+    main { max-width: 420px; width: 100%; background: #fff; border: 1px solid #E2E8F0; border-radius: 16px; padding: 32px 24px; text-align: center; }
+    img.logo { height: 24px; width: auto; margin: 0 auto 24px; display: block; }
+    .badge { width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; margin: 0 auto 16px; }
+    .badge svg { width: 26px; height: 26px; fill: none; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+    .ok { background: #E7F6EE; } .ok svg { stroke: #138A4B; }
+    .warn { background: #FDECEC; } .warn svg { stroke: #C62828; }
+    .muted { background: #EEF2F7; } .muted svg { stroke: #64748B; }
+    h1 { color: #0B1220; font-size: 21px; font-weight: 600; margin: 0 0 8px; letter-spacing: -0.01em; }
+    p { margin: 0; font-size: 15px; line-height: 1.6; }
+    .hint { margin-top: 18px; font-size: 13px; color: #64748B; }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="logo" src="../assets/careeros-wordmark.png" alt="CareerOS">
+    <div id="badge" class="badge muted" aria-hidden="true"></div>
+    <h1 id="title">Return to CareerOS</h1>
+    <p id="message">You can close this page and go back to the CareerOS app.</p>
+    <p class="hint">You can close this window now.</p>
+  </main>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var name = params.get("provider") === "outlook" ? "Outlook" : "Gmail";
+      var outcome = params.get("status");
+      var check = '<svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+      var cross = '<svg viewBox="0 0 24 24"><path d="M7 7l10 10M17 7L7 17"/></svg>';
+      var dash = '<svg viewBox="0 0 24 24"><path d="M6 12h12"/></svg>';
+      var views = {
+        connected: ["ok", check, name + " connected",
+          "CareerOS will now spot recruitment emails and suggest updates to applications you track. Return to the app to continue."],
+        cancelled: ["muted", dash, name + " not connected",
+          "You chose not to give access. Nothing was connected. You can try again any time from Settings in the app."],
+        failed: ["warn", cross, "We couldn't connect " + name,
+          "The link may have expired. Please return to the CareerOS app and try connecting again."]
+      };
+      var view = views[outcome];
+      if (!view) return;
+      var badge = document.getElementById("badge");
+      badge.className = "badge " + view[0];
+      badge.innerHTML = view[1];
+      document.getElementById("title").textContent = view[2];
+      document.getElementById("message").textContent = view[3];
+      document.title = view[2] + " | CareerOS";
+    })();
+  </script>
+</body>
+</html>

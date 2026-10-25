@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="referrer" content="no-referrer">
+  <title>Connecting Gmail | CareerOS</title>
+  <style>
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #F5F7FB; color: #475569;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif; text-align: center; padding: 20px; }
+    h1 { color: #0B1220; font-size: 20px; font-weight: 600; margin: 16px 0 6px; }
+    p { margin: 0; font-size: 15px; }
+    .spinner { width: 36px; height: 36px; margin: 0 auto; border: 3px solid #DBE5F7; border-top-color: #1D5FD1; border-radius: 50%; animation: spin 0.8s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="spinner" aria-hidden="true"></div>
+    <h1>Connecting your Gmail…</h1>
+    <p>This takes a moment. You'll be returned to CareerOS.</p>
+  </main>
+  <script>
+    // Google returns here (the redirect address registered for CareerOS). Forward the one-time
+    // code and state, or Google's error, straight to the CareerOS server, which exchanges the code
+    // (it is useless without the server's secret) and then shows the result page. Nothing is stored
+    // or logged on this page.
+    (function () {
+      var api = "https://p01--careeros-api--szyhwlzghlw2.code.run/api/v1/email-tracking/gmail/callback";
+      var incoming = new URLSearchParams(window.location.search);
+      var forward = new URLSearchParams();
+      ["code", "state", "error"].forEach(function (key) {
+        if (incoming.has(key)) forward.set(key, incoming.get(key));
+      });
+      window.location.replace(api + "?" + forward.toString());
+    })();
+  </script>
+</body>
+</html>
