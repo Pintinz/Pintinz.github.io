@@ -3,146 +3,257 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CareerOS: Jobs & Career Prep</title>
-  <meta name="description" content="Find jobs, internships, graduate programmes and scholarships. Practise aptitude tests and interviews, strengthen your CV and track every application.">
+  <title>CareerOS: Opportunities, Preparation and Career Progress</title>
+  <meta name="description" content="CareerOS is a free Android app to find jobs, internships, graduate programmes and scholarships, practise aptitude tests and interviews, check your CV and track every application.">
+  <link rel="canonical" href="https://pintinz.github.io/">
+  <meta name="theme-color" content="#0B1F33">
   <link rel="icon" href="assets/careeros-symbol.png">
+  <link rel="apple-touch-icon" href="assets/careeros-symbol.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CareerOS">
+  <meta property="og:title" content="CareerOS: Your next opportunity starts here">
+  <meta property="og:description" content="Find opportunities, prepare with confidence and track every application, all in one app. Free on Google Play.">
+  <meta property="og:url" content="https://pintinz.github.io/">
+  <meta property="og:image" content="https://pintinz.github.io/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="CareerOS app on a phone next to the line: Your next opportunity starts here.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CareerOS: Your next opportunity starts here">
+  <meta name="twitter:description" content="Find opportunities, prepare with confidence and track every application, all in one app.">
+  <meta name="twitter:image" content="https://pintinz.github.io/assets/og-image.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "CareerOS: Jobs & Career Prep",
+    "operatingSystem": "Android",
+    "applicationCategory": "BusinessApplication",
+    "url": "https://pintinz.github.io/",
+    "installUrl": "https://play.google.com/store/apps/details?id=com.careeros.careeros",
+    "description": "Find jobs, internships, graduate programmes and scholarships. Practise aptitude tests and interviews, check your CV and track every application.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Inter+Tight:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/screen-home.webp" type="image/webp">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <header class="site-header">
+<body class="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-nav>
     <div class="wrap">
-      <a class="brand" href="./"><img src="assets/careeros-wordmark.png" alt="CareerOS" width="328" height="56"></a>
-      <nav class="nav">
+      <a class="brand" href="./" aria-label="CareerOS home">
+        <img src="assets/careeros-wordmark.png" alt="CareerOS" width="328" height="56">
+        <span class="brand-tagline">Opportunities. Preparation. Progress.</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="Main">
         <a href="#features">Features</a>
-        <a href="#screens">The app</a>
-        <a href="privacy.html">Privacy</a>
+        <a href="#about">About</a>
+        <a href="mailto:careeros.info@gmail.com">Contact</a>
+        <a class="nav-badge" href="https://play.google.com/store/apps/details?id=com.careeros.careeros"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="646" height="250"></a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="wrap">
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <svg class="hero-field" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="field" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#0B74E5"/>
+            <stop offset="0.55" stop-color="#2563EB"/>
+            <stop offset="1" stop-color="#1739A6"/>
+          </linearGradient>
+        </defs>
+        <path fill="url(#field)" d="M50 0 C 38 18, 60 40, 49 62 C 42 78, 48 90, 56 100 L 100 100 L 100 0 Z"/>
+        <path fill="#fff" fill-opacity="0.07" d="M66 0 C 57 22, 74 40, 65 62 C 60 78, 65 90, 73 100 L 100 100 L 100 0 Z"/>
+      </svg>
+
+      <div class="wrap hero-grid">
         <div class="hero-copy">
-          <h1>Your next opportunity starts here.</h1>
-          <p>Find opportunities, prepare with confidence and track every application, all in one app.</p>
+          <p class="eyebrow-pill">All your career tools in one app</p>
+          <h1 id="hero-title">
+            <span>Your next</span>
+            <span>opportunity</span>
+            <span class="accent">starts here.<svg class="swoosh" viewBox="0 0 300 18" aria-hidden="true" focusable="false"><path d="M4 13 C 80 4, 190 2, 296 8" /><path d="M40 16 C 110 10, 200 9, 270 12" /></svg></span>
+          </h1>
+          <p class="hero-lead">Find opportunities, prepare with confidence and track every application, all in one app.</p>
           <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.careeros.careeros"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="646" height="250"></a>
+          <div class="proof">
+            <div class="proof-icons" aria-hidden="true">
+              <span class="pi blue"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></span>
+              <span class="pi green"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></span>
+              <span class="pi violet"><svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span>
+              <span class="pi orange"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h7"/><path d="M17 15l2 2 3-4"/></svg></span>
+            </div>
+            <p><span>Join career-focused people</span> <span>building brighter futures.</span></p>
+          </div>
         </div>
-        <div class="hero-shot">
-          <div class="phone"><img src="assets/screen-home.webp" alt="CareerOS home screen" width="520" height="1125"></div>
+
+        <div class="hero-visual">
+          <svg class="spark spark-a" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M6 14 L16 18 M10 4 L18 14 M22 2 L22 13"/></svg>
+          <div class="phone hero-phone">
+            <img src="assets/screen-home.webp" alt="CareerOS Home screen: greeting, application summary, search and upcoming interview" width="780" height="1688" fetchpriority="high">
+          </div>
+          <ul class="float-cards" aria-label="What CareerOS gives you">
+            <li class="float-card">
+              <span class="fc-icon blue" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg></span>
+              <span>Real<br>opportunities</span>
+            </li>
+            <li class="float-card">
+              <span class="fc-icon blue" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
+              <span>Practical<br>preparation</span>
+            </li>
+            <li class="float-card">
+              <span class="fc-icon violet" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 17l6-6 4 4 7-8"/><path d="M15 7h6v6"/></svg></span>
+              <span>Career<br>growth</span>
+            </li>
+          </ul>
+          <svg class="hero-arrow" viewBox="0 0 120 80" aria-hidden="true" focusable="false"><path d="M6 74 C 40 72, 86 54, 108 14"/><path d="M92 18 L108 12 L112 30"/></svg>
         </div>
       </div>
     </section>
 
-    <section id="features">
+    <section class="features" id="features" aria-labelledby="features-title">
       <div class="wrap">
-        <p class="eyebrow">Features</p>
-        <h2 class="section-title">Everything you need to get hired</h2>
-        <div class="features">
-          <div class="feature">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
-            </div>
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Features</p>
+            <h2 class="section-title" id="features-title">Everything you need to get hired</h2>
+          </div>
+          <p class="script-note" aria-hidden="true">More opportunities<br>A brighter you</p>
+        </div>
+        <ul class="feature-grid">
+          <li class="feature">
+            <span class="f-icon blue" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg></span>
             <h3>Opportunities</h3>
             <p>Jobs, internships, graduate programmes and scholarships from official sources.</p>
-          </div>
-          <div class="feature">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg>
-            </div>
+          </li>
+          <li class="feature">
+            <span class="f-icon green" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></span>
             <h3>Aptitude tests</h3>
             <p>Numerical, verbal and logical practice, timed or at your own pace.</p>
-          </div>
-          <div class="feature">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>
-            </div>
+          </li>
+          <li class="feature">
+            <span class="f-icon violet" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span>
             <h3>Interview preparation</h3>
             <p>Question banks, mock interviews, STAR coaching and an AI interviewer.</p>
-          </div>
-          <div class="feature">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>
-            </div>
+          </li>
+          <li class="feature">
+            <span class="f-icon orange" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span>
             <h3>CV and ATS checks</h3>
-            <p>See how your CV reads against a role, and what to improve.</p>
-          </div>
-          <div class="feature">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h7"/><path d="M17 15l2 2 3-4"/></svg>
-            </div>
+            <p>See how your CV ranks against a role, and what to improve.</p>
+          </li>
+          <li class="feature">
+            <span class="f-icon coral" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
             <h3>Application tracking</h3>
             <p>Stages, interviews and deadlines in one place, with reminders.</p>
-          </div>
-          <div class="feature">
-            <div class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 14.5A5 5 0 0 1 21 19"/></svg>
-            </div>
+          </li>
+          <li class="feature">
+            <span class="f-icon cyan" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 14.5A5 5 0 0 1 21 19"/></svg></span>
             <h3>Community</h3>
             <p>Join company, industry and role communities, and learn from peers.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="showcase" id="about" aria-labelledby="about-title">
+      <div class="wrap">
+        <div class="section-head split">
+          <div>
+            <p class="eyebrow">The app</p>
+            <h2 class="section-title" id="about-title">Built for every step<br class="br-wide"> of your search</h2>
           </div>
+          <p class="section-lead">A clean, simple and powerful experience designed to help you find opportunities, prepare better and stay organised.</p>
         </div>
       </div>
+      <ul class="screens" aria-label="App screens">
+        <li class="screen">
+          <div class="screen-stage stage-green"><div class="phone"><img src="assets/screen-opportunities.webp" alt="Opportunities screen with search, job and scholarship tabs and recommended roles" width="780" height="1688" loading="lazy" decoding="async"></div></div>
+          <h3>Opportunities</h3>
+          <p>Find verified jobs, scholarships and internships.</p>
+        </li>
+        <li class="screen">
+          <div class="screen-stage stage-blue"><div class="phone"><img src="assets/screen-aptitude.webp" alt="Aptitude test setup screen" width="780" height="1688" loading="lazy" decoding="async"></div></div>
+          <h3>Aptitude tests</h3>
+          <p>Practise and track your performance.</p>
+        </li>
+        <li class="screen">
+          <div class="screen-stage stage-cyan"><div class="phone"><img src="assets/screen-interview.webp" alt="Interview preparation screen with mock interviews and the AI interviewer" width="780" height="1688" loading="lazy" decoding="async"></div></div>
+          <h3>Interview preparation</h3>
+          <p>Get ready with real questions and AI interviews.</p>
+        </li>
+        <li class="screen">
+          <div class="screen-stage stage-violet"><div class="phone"><img src="assets/screen-applications.webp" alt="My Applications screen with active, interview and offer counts" width="780" height="1688" loading="lazy" decoding="async"></div></div>
+          <h3>Application tracking</h3>
+          <p>Keep track of every application, stage and deadline.</p>
+        </li>
+      </ul>
     </section>
 
-    <section class="showcase" id="screens">
+    <section class="cta" aria-labelledby="cta-title">
       <div class="wrap">
-        <p class="eyebrow">The app</p>
-        <h2 class="section-title">Built for every step of your search</h2>
-      </div>
-      <div class="screens" tabindex="0" aria-label="App screens">
-        <figure>
-          <div class="phone full"><img src="assets/screen-opportunities.webp" alt="Opportunities" width="440" height="952" loading="lazy"></div>
-          <figcaption>Opportunities</figcaption>
-        </figure>
-        <figure>
-          <div class="phone full"><img src="assets/screen-aptitude.webp" alt="Aptitude test setup" width="440" height="952" loading="lazy"></div>
-          <figcaption>Aptitude tests</figcaption>
-        </figure>
-        <figure>
-          <div class="phone full"><img src="assets/screen-interview.webp" alt="Interview preparation with the AI interviewer" width="440" height="952" loading="lazy"></div>
-          <figcaption>Interview preparation</figcaption>
-        </figure>
-        <figure>
-          <div class="phone full"><img src="assets/screen-community.webp" alt="CareerOS Community" width="440" height="952" loading="lazy"></div>
-          <figcaption>Community</figcaption>
-        </figure>
-        <figure>
-          <div class="phone full"><img src="assets/screen-intelligence.webp" alt="Career Intelligence" width="440" height="952" loading="lazy"></div>
-          <figcaption>Career Intelligence</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="cta">
-      <div class="wrap">
-        <h2 class="section-title">Start your next move today</h2>
-        <p class="section-lead">Free to download on Google Play.</p>
-        <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.careeros.careeros"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="646" height="250"></a>
+        <div class="cta-panel">
+          <div class="cta-copy">
+            <h2 id="cta-title">Start your next move today</h2>
+            <p>Free to download on Google Play.</p>
+            <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.careeros.careeros"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="646" height="250" loading="lazy"></a>
+          </div>
+          <div class="cta-visual">
+            <div class="phone cta-phone"><img src="assets/screen-ai-interviewer.webp" alt="CareerOS AI interviewer hub" width="780" height="1688" loading="lazy" decoding="async"></div>
+            <ul class="float-cards cta-cards" aria-label="Why people use CareerOS">
+              <li class="float-card"><span class="fc-icon blue" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></span><span>New opportunities</span></li>
+              <li class="float-card"><span class="fc-icon blue" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 15.6 7.1 18.2 8 12.7 4 8.8 9.5 8z"/></svg></span><span>Better preparation</span></li>
+              <li class="float-card"><span class="fc-icon blue" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 17l6-6 4 4 7-8"/><path d="M15 7h6v6"/></svg></span><span>Career growth</span></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap">
-      <div class="footer-main">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
         <img class="footer-logo" src="assets/careeros-wordmark-on-dark.png" alt="CareerOS" width="281" height="48">
-        <nav>
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="terms.html">Terms and Conditions</a>
-          <a href="refund.html">Refund Policy</a>
-          <a href="mailto:careeros.info@gmail.com">Contact</a>
-        </nav>
-        <span>&copy; 2026 CareerOS</span>
+        <p class="footer-tagline">Opportunities. Preparation. Progress.</p>
+        <p>Your all-in-one career companion for opportunities, preparation and progress.</p>
       </div>
-      <a class="qr-panel" href="https://play.google.com/store/apps/details?id=com.careeros.careeros">
-        <img src="assets/qr-google-play.svg" alt="QR code linking to CareerOS on Google Play" width="112" height="112">
-        <span><strong>Scan to download</strong>Point your phone's camera at the code to get CareerOS on Google Play.</span>
-      </a>
+      <nav class="footer-links" aria-label="Quick links">
+        <h2>Quick links</h2>
+        <a href="./#features">Features</a>
+        <a href="./#about">About</a>
+        <a href="mailto:careeros.info@gmail.com">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms and Conditions</a>
+        <a href="refund.html">Refund Policy</a>
+      </nav>
+      <div class="qr-card">
+        <a class="qr-code" href="https://play.google.com/store/apps/details?id=com.careeros.careeros"><img src="assets/qr-google-play.svg" alt="QR code linking to CareerOS on Google Play" width="112" height="112" loading="lazy"></a>
+        <div>
+          <h2>Scan to download</h2>
+          <p>Point your phone's camera at the code to get CareerOS on Google Play.</p>
+          <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.careeros.careeros"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="646" height="250" loading="lazy"></a>
+        </div>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>&copy; <span data-year>2026</span> CareerOS. All rights reserved.</span>
+      <span>Opportunities. Preparation. Progress.</span>
     </div>
   </footer>
+
+  <script src="site.js" defer></script>
 </body>
 </html>

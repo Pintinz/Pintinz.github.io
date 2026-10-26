@@ -8,22 +8,31 @@
   <link rel="icon" href="assets/careeros-symbol.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-nav>
     <div class="wrap">
-      <a class="brand" href="./"><img src="assets/careeros-wordmark.png" alt="CareerOS"></a>
-      <nav class="nav">
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="refund.html">Refunds</a>
+      <a class="brand" href="./" aria-label="CareerOS home">
+        <img src="assets/careeros-wordmark.png" alt="CareerOS" width="328" height="56">
+        <span class="brand-tagline">Opportunities. Preparation. Progress.</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="./#features">Features</a>
+        <a href="./#about">About</a>
+        <a href="mailto:careeros.info@gmail.com">Contact</a>
+        <a class="nav-badge" href="https://play.google.com/store/apps/details?id=com.careeros.careeros"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="646" height="250"></a>
       </nav>
     </div>
   </header>
 
-  <main class="legal">
+  <main class="legal" id="main">
     <div class="wrap">
       <h1>Terms and Conditions</h1>
       <p class="updated">Last updated: 25 October 2026</p>
@@ -89,22 +98,36 @@
   </main>
 
   <footer class="site-footer">
-    <div class="wrap">
-      <div class="footer-main">
-        <img class="footer-logo" src="assets/careeros-wordmark-on-dark.png" alt="CareerOS">
-        <nav>
-          <a href="privacy.html">Privacy Policy</a>
-          <a href="terms.html">Terms and Conditions</a>
-          <a href="refund.html">Refund Policy</a>
-          <a href="mailto:careeros.info@gmail.com">Contact</a>
-        </nav>
-        <span>&copy; 2026 CareerOS</span>
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <img class="footer-logo" src="assets/careeros-wordmark-on-dark.png" alt="CareerOS" width="281" height="48">
+        <p class="footer-tagline">Opportunities. Preparation. Progress.</p>
+        <p>Your all-in-one career companion for opportunities, preparation and progress.</p>
       </div>
-      <a class="qr-panel" href="https://play.google.com/store/apps/details?id=com.careeros.careeros">
-        <img src="assets/qr-google-play.svg" alt="QR code linking to CareerOS on Google Play" width="112" height="112">
-        <span><strong>Scan to download</strong>Point your phone's camera at the code to get CareerOS on Google Play.</span>
-      </a>
+      <nav class="footer-links" aria-label="Quick links">
+        <h2>Quick links</h2>
+        <a href="./#features">Features</a>
+        <a href="./#about">About</a>
+        <a href="mailto:careeros.info@gmail.com">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms and Conditions</a>
+        <a href="refund.html">Refund Policy</a>
+      </nav>
+      <div class="qr-card">
+        <a class="qr-code" href="https://play.google.com/store/apps/details?id=com.careeros.careeros"><img src="assets/qr-google-play.svg" alt="QR code linking to CareerOS on Google Play" width="112" height="112" loading="lazy"></a>
+        <div>
+          <h2>Scan to download</h2>
+          <p>Point your phone's camera at the code to get CareerOS on Google Play.</p>
+          <a class="play-badge" href="https://play.google.com/store/apps/details?id=com.careeros.careeros"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" width="646" height="250" loading="lazy"></a>
+        </div>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span>&copy; <span data-year>2026</span> CareerOS. All rights reserved.</span>
+      <span>Opportunities. Preparation. Progress.</span>
     </div>
   </footer>
+
+  <script src="site.js" defer></script>
 </body>
 </html>
