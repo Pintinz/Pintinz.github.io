@@ -1,0 +1,61 @@
+title: How to Pass Aptitude Tests for Graduate Trainee Programmes
+description: A practical plan to prepare for numerical, verbal and logical reasoning tests used in graduate trainee and entry-level recruitment, with timing tips and a 2-week practice schedule.
+eyebrow: Aptitude tests
+updated: 2026-11-04
+
+Most graduate trainee programmes, banks, consulting firms and large employers use an online aptitude test early in recruitment. It's often the stage where the most candidates are filtered out, so a little structured practice goes a long way.
+
+## What aptitude tests measure
+
+Aptitude tests don't test what you studied. They measure how quickly and accurately you can work with information you've never seen before. Most tests combine some of these sections:
+
+- **Numerical reasoning**: percentages, ratios, currency conversions and reading data from tables and charts.
+- **Verbal reasoning**: reading a short passage and deciding whether a statement is true, false or cannot be determined.
+- **Logical (abstract) reasoning**: spotting the rule in a sequence of shapes and choosing what comes next.
+- **Situational judgement**: choosing the most and least effective response to a workplace scenario.
+
+Read the invitation email carefully. Employers usually say which sections to expect and how long you have.
+
+## The real challenge is time
+
+Most candidates could answer every question correctly given enough time. The difficulty is answering 20 to 30 questions in 20 to 35 minutes, which is often under a minute per question. Your practice should therefore focus on speed with accuracy, not just getting answers right.
+
+- Work out your time per question before you start and check it every few questions.
+- If a question is taking twice your average, make your best guess and move on (unless the instructions say wrong answers are penalised).
+- Don't reread the whole passage or table for every question. Skim it once, then go back for the exact figure you need.
+
+## Numerical reasoning tips
+
+- Practise mental percentages: 10%, 5% and 1% of a number, then build up (17.5% = 10% + 5% + 2.5%).
+- Read the units in every table header (thousands, millions, per cent) before you calculate.
+- Look at the answer options first. If they're far apart, estimate instead of calculating exactly.
+- Use the calculator for multi-step sums, but write intermediate results down so you don't lose them.
+
+More in our guide to [numerical reasoning tests](numerical-reasoning-tips.html).
+
+## Verbal reasoning tips
+
+- Answer using only what the passage says, never what you know from outside it.
+- "True" means the passage states or directly implies it. "Cannot say" means the passage doesn't give enough information.
+- Watch for absolute words such as *all*, *never* and *only*. A small word changes the answer.
+
+## Logical reasoning tips
+
+- Check one feature at a time: number of shapes, colour, position, rotation, size.
+- Rules often combine two changes, for example a shape rotating while another moves one step clockwise.
+- If you can't find the rule in about 45 seconds, eliminate options that clearly break the pattern and choose from the rest.
+
+## A 2-week practice plan
+
+1. **Days 1 to 2:** take one timed test of each type to find your weakest section.
+2. **Days 3 to 9:** practise your weakest section daily for 30 to 40 minutes, untimed first, then timed.
+3. **Days 10 to 12:** take full mixed tests under real conditions: quiet room, timer on, no pausing.
+4. **Days 13 to 14:** review every mistake and write down *why* you got it wrong (misread, slow calculation, guessed the rule).
+
+## On test day
+
+- Use a laptop or desktop with a stable connection and a charged battery.
+- Have a calculator, pen and paper ready, and close other tabs and notifications.
+- Read the instructions for each section; some tests don't let you go back to earlier questions.
+
+> CareerOS has timed numerical, verbal and logical practice tests and tracks your accuracy and speed over time. Our questions are original and CareerOS is not affiliated with any test publisher or employer.

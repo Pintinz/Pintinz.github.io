@@ -1,0 +1,48 @@
+title: Numerical Reasoning Tests: 10 Tips and Worked Examples
+description: Speed up on percentages, ratios and data tables with 10 practical numerical reasoning tips and short worked examples for graduate and entry-level tests.
+eyebrow: Aptitude tests
+updated: 2026-11-04
+
+Numerical reasoning tests use maths you learned in secondary school, but under tight time limits and with lots of data on the screen. These tips focus on working faster without making careless mistakes.
+
+## 10 tips
+
+1. **Read the question before the table**, so you know which numbers you need.
+2. **Check the units.** "Revenue (₦ millions)" and "Revenue (₦ thousands)" give very different answers.
+3. **Learn quick percentages.** 10% means moving the decimal point one place; 5% is half of that; 1% is two places.
+4. **Percentage change = (new − old) ÷ old × 100.** Always divide by the original value.
+5. **Treat ratios as fractions.** A ratio of 3:5 means the first part is 3/8 of the total.
+6. **Estimate first.** If the options are 12%, 18%, 25% and 40%, a rough estimate often decides it.
+7. **Write intermediate results down** so you don't redo work when you check.
+8. **Watch for "approximately".** It usually means estimate and pick the closest option.
+9. **Don't get stuck.** Move on after about twice your average time per question.
+10. **Practise with a timer.** Speed only improves under realistic time pressure.
+
+## Worked example 1: percentage change
+
+A company sold 1,250 units in March and 1,400 in April. What was the percentage increase?
+
+- Change: 1,400 − 1,250 = 150
+- Percentage change: 150 ÷ 1,250 × 100 = **12%**
+
+## Worked example 2: ratio
+
+Profit is shared between two partners in the ratio 2:3. Total profit is 450,000. How much does the second partner receive?
+
+- Total parts: 2 + 3 = 5
+- One part: 450,000 ÷ 5 = 90,000
+- Second partner: 3 × 90,000 = **270,000**
+
+## Worked example 3: currency conversion
+
+If 1 US dollar is worth 1,500 naira, how many dollars is 2,400,000 naira?
+
+- 2,400,000 ÷ 1,500 = **1,600 dollars**
+
+## Practise regularly
+
+Twenty minutes a day for two weeks makes a noticeable difference. Track which question types you get wrong and practise those specifically.
+
+Read the full guide: [how to pass aptitude tests](how-to-pass-aptitude-tests.html).
+
+> CareerOS numerical practice tests are timed and track your accuracy and speed by topic. Questions are original; CareerOS is not affiliated with any test publisher.

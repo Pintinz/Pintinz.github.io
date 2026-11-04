@@ -1,0 +1,47 @@
+title: How to Write an ATS-Friendly CV That Gets Interviews
+description: Many employers use applicant tracking systems (ATS) to screen CVs. Learn how to format your CV and use the right keywords so it gets read by a person.
+eyebrow: CV
+updated: 2026-11-04
+
+Many medium and large employers receive hundreds of applications per role and use an applicant tracking system (ATS) to collect and sort them. A CV that the system can't read properly, or that doesn't match the job, may never reach a recruiter.
+
+## Formatting that ATS can read
+
+- Use a simple, single-column layout. Tables, text boxes and columns can scramble the order of your text.
+- Use standard section headings: *Profile*, *Experience*, *Education*, *Skills*, *Certifications*.
+- Use a common font such as Arial or Calibri, 10 to 12 points.
+- Don't put important information in headers, footers or images.
+- Save as PDF unless the employer asks for Word, and check that the PDF's text can be selected and copied.
+
+## Match the job description
+
+ATS and recruiters both look for evidence that you match the role. For each application:
+
+1. Highlight the skills, tools and qualifications in the job description.
+2. Use the same words in your CV where they truthfully describe you. If the advert says "financial modelling", don't only write "Excel analysis".
+3. Put the most relevant experience first in each section.
+
+Never add skills you don't have. Interviews and tests will check them.
+
+## Write achievements, not duties
+
+Compare these two lines:
+
+- *Responsible for social media accounts.*
+- *Grew the society's Instagram from 400 to 2,100 followers in 6 months by planning a weekly content calendar.*
+
+The second shows what you did and what it achieved. Start bullet points with an action verb (led, built, improved, organised, reduced) and add a number wherever you can.
+
+## Keep it focused
+
+- **Length:** one page for most graduates, two pages at most.
+- **Profile:** three or four lines on who you are, what you're good at and what role you want.
+- **Contact details:** phone number, professional email, city and LinkedIn. Leave out your full home address, date of birth and photo unless the employer or country specifically asks for them.
+
+## Check before you send
+
+- Proofread twice and ask someone else to read it.
+- Make sure dates are consistent and there are no unexplained gaps.
+- Name the file clearly, for example *Firstname-Lastname-CV.pdf*.
+
+> CareerOS checks your CV against a job description and shows which keywords and sections to improve, so you can tailor it before you apply.

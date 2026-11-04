@@ -1,0 +1,50 @@
+title: The STAR Method: How to Answer Competency Interview Questions
+description: Learn the STAR method (Situation, Task, Action, Result) with a worked example, so you can answer "tell me about a time when" interview questions clearly and confidently.
+eyebrow: Interviews
+updated: 2026-11-04
+
+Questions that start with "Tell me about a time when…" or "Give an example of…" are competency questions. The interviewer wants evidence that you've already shown a skill they need, such as teamwork, problem-solving or leadership. The STAR method is the simplest way to structure that evidence.
+
+## What STAR stands for
+
+- **Situation**: the background. Where were you and what was happening? Keep it to one or two sentences.
+- **Task**: what you were responsible for, or the goal.
+- **Action**: what *you* did, step by step. This should be the longest part.
+- **Result**: what happened because of your actions, ideally with a number, and what you learned.
+
+## A worked example
+
+**Question:** Tell me about a time you worked under pressure.
+
+- **Situation:** "In my final year, two weeks before our group project was due, one of our four members left the course."
+- **Task:** "As the person managing the timeline, I had to make sure we still submitted a complete project on time."
+- **Action:** "I split the missing work into smaller tasks, matched them to each person's strengths, and set up short check-ins every two days. I took on the data analysis myself because it was the biggest gap."
+- **Result:** "We submitted a day early and received one of the highest marks in the class. I learned to break a big problem into small, visible pieces."
+
+## Common mistakes
+
+- **Saying "we" the whole time.** The interviewer is hiring you. Say "I" for your own actions.
+- **Too much Situation, too little Action.** Aim for roughly 20% Situation and Task, 60% Action, 20% Result.
+- **No result.** Even if things didn't go perfectly, explain the outcome and what you'd do differently.
+- **Made-up stories.** Interviewers ask follow-up questions. Use real examples from study, work, volunteering or personal projects.
+
+## Prepare 6 to 8 stories in advance
+
+Most competency questions draw on a small set of skills. Prepare one real example for each and you can adapt them to almost any question:
+
+1. Working in a team
+2. Leading or influencing others
+3. Solving a difficult problem
+4. Handling pressure or a tight deadline
+5. Dealing with a mistake or failure
+6. Going beyond what was expected
+7. Handling conflict or a difficult person
+8. Learning something new quickly
+
+## Practise out loud
+
+A STAR answer should take about 90 seconds to 2 minutes. Practise saying your stories out loud and time yourself. Writing them down helps you remember them, but speaking them is what makes them sound natural.
+
+See also: [15 common graduate trainee interview questions](graduate-trainee-interview-questions.html).
+
+> The CareerOS AI interviewer asks you competency questions out loud and gives feedback on your structure, clarity and examples, with STAR coaching after each answer.
