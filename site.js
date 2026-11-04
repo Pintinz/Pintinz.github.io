@@ -103,7 +103,7 @@
       ['source', 'medium', 'campaign'].forEach(function (k) { var v = q.get('utm_' + k); if (v) utm[k] = v.slice(0, 120); });
       if (utm.source || utm.medium || utm.campaign) extra.utm = utm;
     }
-    send([{ k: 'view', id: viewId, p: path, t: document.title.slice(0, 160) }], extra);
+    send([{ k: 'view', id: viewId, p: path, t: document.title.replace(/\s*\|\s*CareerOS\s*$/, '').slice(0, 160) }], extra);
   }
 
   function flush() {
