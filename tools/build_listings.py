@@ -78,7 +78,8 @@ GOOGLE_PLAY_BADGE = "https://play.google.com/intl/en_us/badges/static/images/bad
 
 # --------------------------------------------------------------------------------------- fetching
 
-def _get(path: str, params: dict | None = None, *, tries: int = 3):
+def _get(path: str, params: dict | None = None, *, tries: int = 6):
+    """GET with backoff (~2.5 min in total) so a brief API restart doesn't fail the daily build."""
     url = f"{API}{path}"
     if params:
         url += "?" + urllib.parse.urlencode(params)
@@ -90,7 +91,7 @@ def _get(path: str, params: dict | None = None, *, tries: int = 3):
                 return json.load(resp)
         except Exception as exc:  # noqa: BLE001 - retried, then reported
             last = exc
-            time.sleep(2 * (attempt + 1))
+            time.sleep(10 * (attempt + 1))
     raise RuntimeError(f"GET {url} failed: {last}")
 
 
@@ -115,7 +116,7 @@ def _details(kind: str, cards: list[dict]) -> list[dict]:
 
     def one(card: dict) -> dict | None:
         try:
-            return _get(f"/{kind}/{urllib.parse.quote(card['slug'])}")
+            return _get(f"/{kind}/{urllib.parse.quote(card['slug'])}", tries=2)  # skip, don't stall, if one fails
         except RuntimeError as exc:
             print(f"skip {kind} {card.get('slug')}: {exc}", file=sys.stderr)
             return None
