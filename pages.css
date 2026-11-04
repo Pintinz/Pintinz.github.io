@@ -238,6 +238,21 @@ a.ticket-company:hover { color: var(--blue); }
 .foot nav a:hover { color: #fff; text-decoration: underline; }
 .foot-base { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding-top: 20px; padding-bottom: 28px; border-top: 1px solid #1C3A5A; font-size: 13.5px; color: #6F8BA8; }
 
+/* ---------------------------------------------------------------- Analytics consent (site.js) */
+.consent { position: fixed; z-index: 60; left: 16px; right: 16px; bottom: 16px; max-width: 560px; margin: 0 auto 0 0;
+  padding: 18px 20px; border-radius: 14px; background: #0B1F33; color: #C9D5E3; font-size: 14.5px; line-height: 1.55;
+  box-shadow: 0 12px 40px rgba(11, 31, 51, 0.35); }
+.consent p { margin: 0; }
+.consent strong { color: #fff; }
+.consent a { color: #9DC0FF; }
+.consent-actions { display: flex; gap: 10px; margin-top: 14px; }
+.consent-actions button { flex: 1; min-height: 44px; border-radius: 10px; font: inherit; font-weight: 600; cursor: pointer;
+  border: 1px solid #3A5675; background: transparent; color: #fff; }
+.consent-actions button[data-choice="yes"] { background: #1D5FD1; border-color: #1D5FD1; }
+.consent-actions button:hover { border-color: #fff; }
+.consent-actions button:focus-visible { outline: 3px solid #9DC0FF; outline-offset: 2px; }
+.consent-link { background: none; border: 0; padding: 0; font: inherit; color: inherit; text-decoration: underline; cursor: pointer; }
+
 /* ------------------------------------------------------------- responsive */
 @media (max-width: 960px) {
   .layout { grid-template-columns: 1fr; }

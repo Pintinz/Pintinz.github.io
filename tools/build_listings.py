@@ -334,7 +334,7 @@ def page(*, title: str, description: str, path: str, body: str, ld: list[dict] |
       <a href="{up}guides/how-to-pass-aptitude-tests.html">Aptitude tests</a><a href="{up}guides/graduate-trainee-interview-questions.html">Interview questions</a>
       <a href="{up}guides/ats-friendly-cv.html">ATS-friendly CV</a><a href="{up}guides/scholarship-application-tips.html">Scholarship applications</a></nav>
     <nav aria-label="CareerOS"><h2>CareerOS</h2>
-      <a href="{up}">About the app</a><a href="{up}privacy.html">Privacy</a><a href="{up}terms.html">Terms</a><a href="mailto:careeros.info@gmail.com">Contact</a></nav>
+      <a href="{up}">About the app</a><a href="{up}privacy.html">Privacy</a><a href="{up}terms.html">Terms</a><a href="mailto:careeros.info@gmail.com">Contact</a><a href="#" class="consent-link" data-consent-settings hidden>Analytics choices</a></nav>
   </div>
   <div class="wrap foot-base"><span>&copy; {year} CareerOS</span><span>CareerOS is not the employer or scholarship provider for listings shown here.</span></div>
 </footer>
