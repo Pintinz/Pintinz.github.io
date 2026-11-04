@@ -1,0 +1,7 @@
+# Built by GitHub Actions (tools/build_guides.py, tools/build_listings.py)
+/jobs/
+/companies/
+/scholarships/
+/guides/
+/sitemap.xml
+__pycache__/

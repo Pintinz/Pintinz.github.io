@@ -1,0 +1,41 @@
+# Rebuilds the job and scholarship pages from the live CareerOS API every day (and on every push),
+# then publishes the whole site to GitHub Pages. One-time setup: repository Settings → Pages →
+# Build and deployment → Source: "GitHub Actions".
+name: Build and publish site
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "30 5 * * *"   # 05:30 UTC daily
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build guides
+        run: python tools/build_guides.py
+      - name: Build listing pages and sitemap
+        run: python tools/build_listings.py
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}

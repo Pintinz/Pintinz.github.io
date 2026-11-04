@@ -29,3 +29,12 @@
     el.textContent = String(new Date().getFullYear());
   });
 })();
+
+// "Open in the app" uses an Android intent link (opens CareerOS, or Google Play if it isn't
+// installed); elsewhere it would do nothing, so it's hidden and the Play badge remains.
+(function () {
+  var android = /Android/i.test(navigator.userAgent);
+  document.querySelectorAll("[data-android-only]").forEach(function (el) {
+    if (!android) el.hidden = true;
+  });
+})();
