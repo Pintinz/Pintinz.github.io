@@ -266,6 +266,10 @@ h1, h2, h3 { color: var(--ink); font-weight: 800; letter-spacing: -0.02em; line-
 
   .hero-visual { margin: 0 calc(-1 * var(--gutter)); padding: 44px var(--gutter) 88px; background: radial-gradient(90% 60% at 80% 10%, #3B82F6 0%, rgba(59, 130, 246, 0) 70%), linear-gradient(160deg, var(--blue-tech) 0%, var(--blue) 50%, #1739A6 100%); border-radius: 60% 40% 0 0 / 44px 44px 0 0; }
   .hero-phone { width: min(250px, 66vw); transform: rotate(4deg); }
+  /* The three benefit cards sit as one even row under the phone instead of wrapping 2 + 1. */
+  .hero .float-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; width: 100%; max-width: 420px; }
+  .hero .float-card { flex-direction: column; justify-content: flex-start; gap: 8px; padding: 12px 6px; text-align: center; font-size: 13px; line-height: 1.2; animation: none; }
+  .hero .float-card br { display: none; }
 
   .features { margin-top: -40px; border-radius: 28px 28px 0 0; padding: 56px 0 64px; }
   .section-head { flex-direction: column; align-items: flex-start; gap: 14px; margin-bottom: 28px; }
@@ -277,7 +281,10 @@ h1, h2, h3 { color: var(--ink); font-weight: 800; letter-spacing: -0.02em; line-
 
   .showcase { padding: 56px 0 64px; }
   .br-wide { display: none; }
-  .screen { flex-basis: 72%; max-width: 280px; }
+  /* Smaller phones so one and a half show at once: it reads as a swipeable row, not a wall. */
+  .screen { flex-basis: 58%; max-width: 230px; }
+  .screen-stage { padding: 0 6%; }
+  .screen .phone { border-width: 6px; border-radius: 26px; }
   .screen h3 { margin-top: 20px; font-size: 18px; }
 
   .cta { padding-bottom: 56px; }
@@ -288,6 +295,8 @@ h1, h2, h3 { color: var(--ink); font-weight: 800; letter-spacing: -0.02em; line-
 
   .site-footer { padding-top: 48px; }
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-links { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 16px; }
+  .footer-links h2 { grid-column: 1 / -1; }
   .qr-card { max-width: none; }
   .footer-bottom { flex-direction: column; margin-top: 36px; }
 }
@@ -297,6 +306,9 @@ h1, h2, h3 { color: var(--ink); font-weight: 800; letter-spacing: -0.02em; line-
   .feature { display: grid; grid-template-columns: 48px 1fr; column-gap: 16px; padding: 18px; }
   .feature .f-icon { grid-row: span 2; }
   .feature h3 { margin: 0 0 4px; }
+  /* A QR code is no use on the phone that is showing it: keep just the store badge. */
+  .qr-card { background: none; border: 0; padding: 0; }
+  .qr-card .qr-code, .qr-card h2, .qr-card p { display: none; }
 }
 
 @media (max-width: 400px) {
@@ -320,7 +332,7 @@ h1, h2, h3 { color: var(--ink); font-weight: 800; letter-spacing: -0.02em; line-
 .faq-item summary { cursor: pointer; list-style: none; padding: 18px 52px 18px 20px; position: relative; color: var(--ink); font-weight: 600; font-size: 17px; }
 .faq-item summary::-webkit-details-marker { display: none; }
 .faq-item summary::after { content: "+"; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); color: var(--blue); font-size: 22px; font-weight: 500; }
-.faq-item[open] summary::after { content: "2"; }
+.faq-item[open] summary::after { content: "\2212"; }
 .faq-item p { margin: 0; padding: 0 20px 18px; line-height: 1.6; }
 @media (max-width: 640px) { .faq { padding: 64px 0 8px; } .faq-item summary { font-size: 16px; } }
 

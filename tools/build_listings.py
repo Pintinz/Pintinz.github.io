@@ -52,6 +52,7 @@ EMPLOYMENT_LABELS = {
     "INTERNSHIP": "Internship", "VOLUNTEER": "Volunteer", "GRADUATE_PROGRAM": "Graduate programme", "APPRENTICESHIP": "Apprenticeship",
 }
 WORK_MODE_LABELS = {"ONSITE": "On-site", "REMOTE": "Remote", "HYBRID": "Hybrid"}
+DEGREE_LABELS = {"UNDERGRADUATE": "Undergraduate", "MASTERS": "Master's", "PHD": "PhD", "OTHER": "Other"}
 LEVEL_LABELS = {"ENTRY": "Entry level", "JUNIOR": "Junior", "MID": "Mid level", "SENIOR": "Senior", "LEAD": "Lead", "EXECUTIVE": "Executive"}
 FUNDING_LABELS = {"FULL": "Fully funded", "PARTIAL": "Partially funded", "TUITION_ONLY": "Tuition only", "STIPEND_ONLY": "Stipend only"}
 QUALIFICATION_LABELS = {
@@ -729,7 +730,7 @@ def scholarship_page(s: dict, others: list[dict]) -> str:
     deadline = nice_date(s.get("application_deadline"))
     facts = [
         ("Study in", s.get("country")), ("Funding", FUNDING_LABELS.get(s.get("funding_type"))),
-        ("Levels", ", ".join(x.replace("_", " ").capitalize() for x in (s.get("degree_levels") or [])) or None),
+        ("Levels", ", ".join(DEGREE_LABELS.get(x, x.replace("_", " ").capitalize()) for x in (s.get("degree_levels") or [])) or None),
         ("Fields", ", ".join((s.get("fields_of_study") or [])[:3]) or None),
     ]
     facts_html = "".join(f"<div><dt>{esc(k)}</dt><dd>{esc(v)}</dd></div>" for k, v in facts if v)

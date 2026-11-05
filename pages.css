@@ -290,7 +290,7 @@ a.ticket-company:hover { color: var(--blue); }
   .crumbs li[aria-current] { max-width: 24ch; }
   .band-org { gap: 14px; }
   .logo-xl { width: 64px; height: 64px; }
-  .foot-grid { grid-template-columns: 1fr; }
+  .foot-grid { gap: 28px 20px; }
 }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
