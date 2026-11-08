@@ -525,6 +525,7 @@ def job_page(job: dict, by_company: dict[str, list[dict]], by_country: dict[str,
     <span class="stub-count stub-{tone}">{esc(label)}</span>
     {f'<span class="stub-date">{esc(deadline)}</span>' if deadline else '<span class="stub-date">Apply soon: roles can close early</span>'}
     {apply_btn}
+    <span class="stub-safety">Real employers never ask you to pay to apply.</span>
   </div>
 </div>"""
 

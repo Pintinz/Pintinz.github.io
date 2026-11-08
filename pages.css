@@ -131,6 +131,7 @@ a.ticket-company:hover { color: var(--blue); }
 .stub-none { font-size: 18px; color: var(--ink); }
 .stub-date { font-variant-numeric: tabular-nums; font-size: 13.5px; color: var(--body); margin-bottom: 14px; }
 .ticket-stub .btn { width: 100%; text-align: center; line-height: 1.25; padding: 10px 16px; }
+.stub-safety { display: block; margin-top: 10px; font-size: 12.5px; color: var(--body); }
 
 /* ------------------------------------------------------------- layout */
 .layout { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 40px; margin-top: 40px; align-items: start; }
