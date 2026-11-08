@@ -28,6 +28,7 @@ import re
 import shutil
 import sys
 import time
+import unicodedata
 import urllib.parse
 import urllib.request
 from collections import Counter
@@ -42,6 +43,11 @@ UA = "CareerOS-site-builder/1.0"
 MAX_JOBS = 3000
 MAX_SCHOLARSHIPS = 1000
 FOCUS_COUNTRY = "Nigeria"  # listed first in country navigation (primary market)
+
+# Sources spell some countries differently; one hub page per country, keyed by slug.
+COUNTRY_NAMES = {"cote-d-ivoire": "Côte d'Ivoire", "ivory-coast": "Côte d'Ivoire", "czech-republic": "Czechia", "czechia": "Czechia"}
+# Employers' own test postings ("test - ne pas postuler") are not real openings.
+TEST_POSTING = re.compile(r"ne\s+pas\s+postuler|do\s+not\s+apply|nicht\s+bewerben|no\s+postular", re.I)
 
 EMPLOYMENT_TYPES = {
     "FULL_TIME": "FULL_TIME", "PART_TIME": "PART_TIME", "CONTRACT": "CONTRACTOR", "TEMPORARY": "TEMPORARY",
@@ -137,7 +143,12 @@ def esc(value) -> str:
 
 
 def slugify(value: str) -> str:
-    return re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-") or "other"
+    ascii_value = unicodedata.normalize("NFKD", value).encode("ascii", "ignore").decode()  # Côte -> Cote, Nestlé -> Nestle
+    return re.sub(r"[^a-z0-9]+", "-", ascii_value.lower()).strip("-") or "other"
+
+
+def canonical_country(value: str) -> str:
+    return COUNTRY_NAMES.get(slugify(value), value)
 
 
 def safe_slug(value: str) -> str:
@@ -823,7 +834,9 @@ def scholarships_index(items: list[dict]) -> str:
 # --------------------------------------------------------------------------------------- sitemap & build
 
 def sitemap(out: Path, urls: list[tuple[str, str | None]]) -> None:
-    rows = "".join(f"  <url><loc>{esc(SITE + '/' + u)}</loc>{f'<lastmod>{m}</lastmod>' if m else ''}</url>\n" for u, m in urls)
+    unique = dict(reversed(urls))  # one entry per URL (first one wins); duplicates make Search Console warn
+    rows = "".join(f"  <url><loc>{esc(SITE + '/' + u)}</loc>{f'<lastmod>{m}</lastmod>' if m else ''}</url>\n"
+                   for u, m in reversed(unique.items()))
     (out / "sitemap.xml").write_text(
         f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{rows}</urlset>\n',
         encoding="utf-8",
@@ -844,6 +857,13 @@ def build(out: Path, jobs: list[dict], scholarships: list[dict]) -> dict:
     if guides.exists():
         urls.append(("guides/", None))
         urls.extend((f"guides/{p.name}", None) for p in sorted(guides.glob("*.html")) if p.name != "index.html")
+
+    jobs = [j for j in jobs if not TEST_POSTING.search(j.get("title") or "")]
+    country_display: dict[str, str] = {}  # slug -> first spelling seen, so variants share one hub page
+    for job in jobs:
+        if (job.get("country") or "").strip():
+            name = canonical_country(job["country"].strip())
+            job["country"] = country_display.setdefault(slugify(name), name)
 
     by_country: dict[str, list[dict]] = {}
     by_company: dict[str, list[dict]] = {}
