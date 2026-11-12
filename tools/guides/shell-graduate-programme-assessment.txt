@@ -1,0 +1,85 @@
+title: Shell Graduate Programme Assessment: Virtual Job Tryout, Interview and Practice
+description: How the Shell Graduate Programme selection works, from the Virtual Job Tryout and recorded interview to the virtual case study, with practice questions.
+eyebrow: Company tests
+updated: 2026-11-12
+
+Shell's Graduate Programme doesn't start with a classic pen-and-paper aptitude test. According to Shell's careers site, the first stage is a **Virtual Job Tryout** followed by a recorded **On-Demand Interview**, and the final stage is a virtual case study with two Shell employees. Here's what each stage involves and how to prepare.
+
+> CareerOS is not affiliated with Shell. Facts about the process below come from Shell's official careers site. Stages can differ by country and year, so always follow the instructions in your own invitation.
+
+## The official stages
+
+Shell describes the Graduate Programme application process like this:
+
+1. **Online application.** You find a Graduate Programme in your country on the Shell careers site and apply online. Shell says the form takes 5–10 minutes, and you must be eligible to work in the country where the programme is based.
+2. **Virtual Job Tryout.** Simulations where you tackle challenges, show your problem-solving skills, share your story and reveal how you approach work.
+3. **On-Demand Interview.** You get time to prepare each answer before recording it. You can save your progress, but you must finish within **7 days** of the invitation. Shell says the tryout and interview together take about **40 minutes**.
+4. **Final assessment (virtual).** A case study session with two Shell employees. You'll need to read and prepare for it, and Shell says all the information you need is provided in advance. Graduate Programme applicants also have a virtual interview with the same two employees.
+
+## How to prepare for each stage
+
+**The Virtual Job Tryout** tests how you work through realistic problems. Practise:
+
+- reading short data (tables, budgets, percentages) quickly and accurately;
+- choosing sensible actions in workplace situations: safety first, raise problems early, involve the right people;
+- explaining your reasoning in a sentence or two.
+
+**The On-Demand Interview** is recorded, so practise answering out loud with a timer. Use the STAR structure: **S**ituation, **T**ask, **A**ction, **R**esult, and spend most of your time on what *you* did.
+
+**The case study** rewards preparation. Read the pack twice, note the decision you're asked to make, pick a recommendation and back it with two or three numbers from the pack. Expect follow-up questions and be ready to change your view if the evidence supports it.
+
+## Practice questions
+
+These are original CareerOS practice questions written for the skills each stage tests. They are **not** real Shell assessment content.
+
+**1. Budget.** A project budget is $80,000. 35% has been spent on equipment and $18,000 on contractors. How much is left?
+
+*Answer: $34,000.* Equipment is 0.35 × 80,000 = $28,000, and 80,000 − 28,000 − 18,000 = 34,000.
+
+**2. Energy saving.** A site uses 1,200 kWh a day. A change cuts use by 15%. How much energy is saved in a 30-day month?
+
+*Answer: 5,400 kWh.* The daily saving is 180 kWh, and 180 × 30 = 5,400.
+
+**3. Planning.** Task A takes 2 days. Task B takes 3 days and can't start until A is finished. Task C takes 1 day and needs B to be finished. Task D takes 4 days and can run at any time. What's the shortest time to finish all four?
+
+*Answer: 6 days.* A → B → C is 2 + 3 + 1 = 6 days, and D fits alongside it.
+
+**4. Workplace judgement.** You notice a colleague skipping a safety check to meet a deadline. What's the best first step?
+
+- (a) Ignore it; the deadline matters more.
+- (b) Raise it with the colleague straight away and make sure the check is done.
+- (c) Report it a week later in your progress update.
+
+*Strongest answer: (b).* In energy companies, safety comes before deadlines, and acting promptly prevents harm.
+
+**5. Recorded interview.** "Tell us about a time you solved a problem with limited information."
+
+*A strong answer:* name the situation in one sentence, say what you needed to decide, explain how you gathered the facts you could and made an assumption you tested, and finish with the result and what you learnt.
+
+## Frequently asked questions
+
+### Does Shell use an aptitude test for its Graduate Programme?
+
+Shell's careers site describes a Virtual Job Tryout with simulations and problem-solving, followed by a recorded On-Demand Interview, rather than a traditional standalone aptitude test.
+
+### How long does the Shell Virtual Job Tryout take?
+
+Shell says the Virtual Job Tryout and On-Demand Interview take about 40 minutes together.
+
+### How long do I have to complete the On-Demand Interview?
+
+You must complete it within 7 days of receiving the invitation, and you can save your progress.
+
+### What happens at the Shell final assessment?
+
+Applicants complete a virtual case study session with two Shell employees, using information provided in advance. Graduate Programme applicants also have a virtual interview with the same two employees.
+
+### Can I apply for a Shell Graduate Programme in Nigeria?
+
+Shell runs graduate programmes in several countries. Search the Shell careers site for current openings in Nigeria, and check that you're eligible to work in the country of the programme.
+
+## Practise for the assessment
+
+> Practise recorded interview answers with the AI interviewer, and timed numerical and reasoning tests, in the [CareerOS app](https://play.google.com/store/apps/details?id=com.careeros.careeros&referrer=utm_source%3Dsite%26utm_medium%3Dguide%26utm_campaign%3Dshell_test). The app is free to download on Android.
+
+Official source: [Shell Graduate Programme application process](https://www.shell.us/about-us/careers/candidate-resource-center/graduate-program-application-process.html).

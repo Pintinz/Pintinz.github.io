@@ -375,7 +375,7 @@ def page(*, title: str, description: str, path: str, body: str, ld: list[dict] |
       <a href="{up}companies/">Companies hiring</a><a href="{up}scholarships/">Scholarships</a></nav>
     <nav aria-label="Guides"><h2>Guides</h2>
       <a href="{up}guides/how-to-pass-aptitude-tests.html">Aptitude tests</a><a href="{up}guides/graduate-trainee-interview-questions.html">Interview questions</a>
-      <a href="{up}guides/ats-friendly-cv.html">ATS-friendly CV</a><a href="{up}guides/scholarship-application-tips.html">Scholarship applications</a><a href="{up}guides/nnpc-snepco-scholarship-test.html">Scholarship tests</a></nav>
+      <a href="{up}guides/ats-friendly-cv.html">ATS-friendly CV</a><a href="{up}guides/scholarship-application-tips.html">Scholarship applications</a><a href="{up}guides/nnpc-snepco-scholarship-test.html">Scholarship tests</a><a href="{up}guides/nnpc-aptitude-test.html">NNPC aptitude test</a></nav>
     <nav aria-label="CareerOS"><h2>CareerOS</h2>
       <a href="{up}">About the app</a><a href="{up}privacy.html">Privacy</a><a href="{up}terms.html">Terms</a><a href="mailto:careeros.info@gmail.com">Contact</a><a href="#" class="consent-link" data-consent-settings hidden>Analytics choices</a></nav>
   </div>
@@ -433,6 +433,15 @@ def app_card(kind: str, slug: str, heading: str, text: str, up: str = "../") -> 
   <p>{esc(text)}</p>
   <a class="btn btn-ghost" href="{app_link(kind, slug)}" data-android-only>Open in the app</a>
   <a class="play" href="{play({'jobs': 'job', 'scholarships': 'scholarship'}.get(kind, kind), 'card')}"><img src="{GOOGLE_PLAY_BADGE}" alt="Get it on Google Play" width="646" height="250" loading="lazy"></a>
+</aside>"""
+
+
+def share_card(text: str, path: str) -> str:
+    """'Share on WhatsApp': the friend gets this page (with its link preview), not a bare employer link."""
+    message = f"{text}\nSee it on CareerOS: {SITE}/{path}"
+    return f"""<aside class="side-card share-card">
+  <h2>Know someone who'd want this?</h2>
+  <a class="btn btn-ghost" href="https://wa.me/?text={urllib.parse.quote(message, safe='')}" target="_blank" rel="noopener">Share on WhatsApp</a>
 </aside>"""
 
 
@@ -630,6 +639,7 @@ def job_page(job: dict, by_company: dict[str, list[dict]], by_country: dict[str,
   <div class="side">
 {prep_card(job)}
 {app_card("jobs", job["slug"], "Track this application", "Save the role, get a reminder before it closes, and practise for the interview in CareerOS.")}
+{share_card(f"{job['title']} at {company_of(job).get('name') or 'a company hiring now'}", path)}
   </div>
 </div>
 {related}
@@ -745,6 +755,10 @@ def company_page(company: dict, jobs: list[dict]) -> str:
         side += ('<aside class="side-card"><h2>Where they\'re hiring</h2><ul class="count-list">'
                  + "".join(f'<li><a href="../jobs/in-{slugify(c)}.html">{esc(c)} <span>{n}</span></a></li>' for c, n in countries.most_common(10))
                  + "</ul></aside>")
+    guide = next((g for key, g in COMPANY_TEST_GUIDES.items() if slug == key or slug.startswith(key + "-")), None)
+    if guide:
+        side += (f'<aside class="side-card"><h2>Prepare for the test</h2><p>Their selection process, explained, with practice questions.</p>'
+                 f'<ul class="link-list"><li><a href="../guides/{guide[0]}.html">{esc(guide[1])}</a></li></ul></aside>')
     body = f"""{band(head)}
 <div class="wrap layout layout-hub">
   <section class="block"><h2>Open roles</h2><ul class="rows">{"".join(job_row(j, "../jobs/") for j in jobs)}</ul></section>
@@ -789,6 +803,13 @@ def companies_index(companies: dict[str, list[dict]], info: dict[str, dict]) -> 
 # --------------------------------------------------------------------------------------- scholarships
 
 # Scholarships with a selection test and a CareerOS prep guide (slug fragment → guide, link text).
+# Company slug (or slug prefix before "-") → its recruitment-test guide.
+COMPANY_TEST_GUIDES = {
+    "nnpc": ("nnpc-aptitude-test", "NNPC aptitude test: stages and practice"),
+    "shell": ("shell-graduate-programme-assessment", "Shell Graduate Programme assessment"),
+    "nigerian-breweries": ("nigerian-breweries-graduate-programme-test", "Nigerian Breweries graduate test"),
+}
+
 TEST_GUIDES = {
     "nnpc-snepco-national-university": ("nnpc-snepco-scholarship-test", "How to prepare for the NNPC/SNEPCo test"),
     "totalenergies-national-merit": ("totalenergies-scholarship-test", "How to prepare for the TotalEnergies NMSS test"),
@@ -858,7 +879,7 @@ def scholarship_page(s: dict, others: list[dict]) -> str:
 {ticket}
 <div class="layout">
   <article class="prose">{chr(10).join(sections)}</article>
-  <div class="side">{prep}{app_card("scholarships", s["slug"], "Never miss the deadline", "Save it in CareerOS to get reminders and track your application.")}</div>
+  <div class="side">{prep}{app_card("scholarships", s["slug"], "Never miss the deadline", "Save it in CareerOS to get reminders and track your application.")}{share_card(s["name"], path)}</div>
 </div>
 {related}
 </div>"""

@@ -1,0 +1,109 @@
+title: NNPC Aptitude Test: Recruitment Stages and Practice Questions
+description: How NNPC Limited's graduate trainee recruitment works, what to expect from the computer-based test, and worked practice questions to prepare.
+eyebrow: Company tests
+updated: 2026-11-12
+
+NNPC Limited recruits graduate trainees and experienced hires through its own careers portal, and the computer-based test (CBT) is the stage that decides who reaches an interview. This guide sets out the official stages, what the test is likely to cover, and how to prepare.
+
+> CareerOS is not affiliated with NNPC Limited. Facts about the recruitment process below come from the official NNPC careers portal. Confirm details there before you apply.
+
+## How NNPC recruitment works
+
+The NNPC careers portal lists five stages:
+
+1. **Online application** on the NNPC careers page. NNPC advises candidates to read the eligibility criteria carefully before applying.
+2. **Screening and shortlisting.** Applications are screened, and candidates who meet the criteria are shortlisted for a computer-based test.
+3. **Computer-based test (CBT).** Candidates who get the required score are invited to an interview.
+4. **Interviews.** Applicants who meet the CBT requirement are invited for oral interviews.
+5. **Job offers** for candidates who succeed at interview.
+
+NNPC also says it doesn't charge any fees for job applications, and it isn't responsible for applications made anywhere other than its official careers page. If someone asks you to pay to be "shortlisted", walk away.
+
+## Is NNPC recruiting now?
+
+The careers portal currently shows that application submission is closed. When a new exercise opens, it's announced on the portal, so check there rather than relying on social media posts. In the last exercise, news reports said more than 45,000 candidates sat the CBT in December 2024, so preparation is what separates candidates.
+
+## What the CBT is likely to cover
+
+NNPC doesn't publish a syllabus for the CBT. Graduate recruitment tests in Nigeria commonly include:
+
+- **Numerical reasoning**: percentages, ratios, rates and reading simple data.
+- **Verbal reasoning and English**: spelling, vocabulary and comprehension.
+- **Logical reasoning**: sequences, patterns and simple deductions.
+
+Some candidates also report questions on general knowledge or their own discipline. Treat this as a sensible preparation plan, not a guarantee of the format.
+
+## Practice questions
+
+These are original CareerOS practice questions in the style of a graduate CBT. They are **not** past questions from the real NNPC test.
+
+**1. Percentages.** A depot's stock falls from 2,500,000 litres to 2,150,000 litres. What is the percentage fall?
+
+*Answer: 14%.* The fall is 350,000 litres, and 350,000 ÷ 2,500,000 = 0.14.
+
+**2. Rates.** A pump fills a 33,000-litre tanker at 1,100 litres per minute. How long does it take?
+
+*Answer: 30 minutes.* 33,000 ÷ 1,100 = 30.
+
+**3. Ratios.** ₦1,200,000 is shared between two teams in the ratio 7 : 5. How much does the smaller share get?
+
+*Answer: ₦500,000.* There are 12 parts, so each part is ₦100,000, and 5 parts are ₦500,000.
+
+**4. Growth.** Output was 120 units in the first quarter and 150 in the second. If the third quarter grows by the same percentage, what will output be?
+
+*Answer: 187.5 units.* Growth from 120 to 150 is 25%, and 150 × 1.25 = 187.5.
+
+**5. Sequences.** What comes next: 1, 4, 9, 16, 25, ?
+
+*Answer: 36.* These are square numbers: 1², 2², 3², 4², 5², then 6².
+
+**6. Spelling.** Which word is spelt correctly? (a) accomodate (b) accommodate (c) acommodate
+
+*Answer: (b) accommodate*, with a double c and a double m.
+
+**7. Vocabulary.** Choose the word closest in meaning to **mitigate**: (a) worsen (b) reduce (c) ignore (d) delay.
+
+*Answer: (b) reduce.* To mitigate a risk is to make it less severe.
+
+## A two-week preparation plan
+
+- **Days 1–2:** take one timed set in each area to find your weakest.
+- **Days 3–7:** rebuild the basics in that area (percentages, ratios, spelling rules), then do short timed drills.
+- **Days 8–11:** mix all areas in timed sets of about a minute per question.
+- **Days 12–13:** take two full mock tests under exam conditions and review every wrong answer.
+- **Day 14:** rest, check your test invitation and plan your journey to the centre.
+
+## On the day
+
+- Read your invitation for the date, time, centre and what to bring.
+- Arrive early. Large exercises can mean queues and delays at the centre.
+- Don't get stuck. If a question is taking too long, pick your best answer and move on, unless the instructions say wrong answers lose marks.
+- Keep your login details safe; you'll need them to check later stages on the portal.
+
+## Frequently asked questions
+
+### Does NNPC charge a fee to apply?
+
+No. The official careers portal says NNPC Limited doesn't charge any fees for job applications.
+
+### Where do I apply for NNPC jobs?
+
+Only on the official careers portal, careers.nnpcgroup.com. NNPC says it isn't responsible for applications submitted on any other website.
+
+### Is the NNPC recruitment portal open now?
+
+At the time of writing, the portal says application submission is closed. New exercises are announced on the portal.
+
+### What comes after the NNPC CBT?
+
+According to the portal, candidates who get the required CBT score are invited to oral interviews, and successful candidates at interview receive job offers.
+
+### Are there official NNPC aptitude test past questions?
+
+NNPC doesn't publish past questions. Be wary of anyone selling "leaked" questions; practising the common test areas under time pressure is the reliable way to prepare.
+
+## Practise for the test
+
+> Practise timed numerical, verbal and logical reasoning tests in the [CareerOS app](https://play.google.com/store/apps/details?id=com.careeros.careeros&referrer=utm_source%3Dsite%26utm_medium%3Dguide%26utm_campaign%3Dnnpc_test). The app is free to download on Android and includes mock tests with answer explanations.
+
+Official careers portal: [careers.nnpcgroup.com](https://careers.nnpcgroup.com/journey).

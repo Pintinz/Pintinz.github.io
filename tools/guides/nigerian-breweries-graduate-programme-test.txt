@@ -1,0 +1,106 @@
+title: Nigerian Breweries Graduate Programme Test: Process and Practice Questions
+description: Who can apply for the Nigerian Breweries (HEINEKEN) Global Graduate Programme, how the online assessment and interviews work, and practice questions.
+eyebrow: Company tests
+updated: 2026-11-12
+
+Nigerian Breweries recruits graduates through the HEINEKEN **Global Graduate Programme**, an 18-month programme based in Lagos with assignments across the business. Selection starts with an online assessment that you can take **only once**, so it pays to be ready before you click the link.
+
+> CareerOS is not affiliated with Nigerian Breweries or HEINEKEN. Facts below come from the official Nigerian Breweries Global Graduate Programme listing on the HEINEKEN careers site. Confirm details there before you apply.
+
+## Who can apply
+
+The official listing for the 2026 intake asked for:
+
+- at least **five O'Level credits**, including Mathematics and English;
+- at least a **Second Class Upper (2:1)** bachelor's degree in a discipline relevant to the role (a master's degree is an added advantage);
+- completion of **NYSC**;
+- new graduates: a maximum of **one year** after graduation, with no previous work experience required;
+- fluent English, the right to work in the country of the programme, and willingness to be fully globally mobile.
+
+The 2026 intake closed on **22 May 2026**. Watch the HEINEKEN careers site for the next one.
+
+## How selection works
+
+According to the official listing:
+
+1. **Application.** Upload your CV and cover letter on the application portal.
+2. **Online assessments.** Situational behaviour scenarios, plus a **cognitive test**.
+3. **Two interviews** for candidates who pass the online assessments.
+4. **In-person assessment centre** with a range of activities and evaluations.
+5. **Offer** to join the Global Graduate Programme for those who succeed at every stage.
+
+One rule matters a lot: you can complete the online assessment **only once**. If you apply to several Global Graduate Programme roles in the same country, the result is linked to the **first** one you applied for, so HEINEKEN recommends applying to only one per country.
+
+## What to prepare
+
+HEINEKEN says the situational scenarios need no preparation in advance; answer them honestly as yourself. The **cognitive test** is where practice helps, because it's timed. Practise:
+
+- **Numerical reasoning**: percentages, rates and simple data.
+- **Logical reasoning**: sequences and deductions.
+- **Verbal reasoning**: word meanings and odd-one-out questions.
+
+## Practice questions
+
+These are original CareerOS practice questions. They are **not** real HEINEKEN or Nigerian Breweries assessment content.
+
+**1. Packing.** A crate holds 24 bottles. How many crates are needed for 1,000 bottles?
+
+*Answer: 42.* 1,000 ÷ 24 = 41.67, so 41 crates aren't enough and you need 42.
+
+**2. Percentages.** Weekly sales rise from 400 cases to 460 cases. What is the percentage increase?
+
+*Answer: 15%.* The increase is 60, and 60 ÷ 400 = 0.15.
+
+**3. Sequences.** What comes next: 2, 5, 11, 23, 47, ?
+
+*Answer: 95.* Each number is double the one before, plus 1.
+
+**4. Deduction.** Everyone in the brewing team has completed safety training. Tolu hasn't completed safety training. What can you conclude?
+
+*Answer: Tolu isn't in the brewing team.* If Tolu were in the team, Tolu would have completed the training.
+
+**5. Odd one out.** Analyse, Evaluate, Ignore, Assess.
+
+*Answer: Ignore.* The other three all mean examining something carefully.
+
+**6. Situational.** You're leading a group task and two members strongly disagree about the plan. What's the most effective first step?
+
+- (a) Choose one plan yourself without discussion.
+- (b) Ask each to explain their reasoning briefly, agree the goal, then decide together.
+- (c) Leave them to sort it out.
+
+*Strongest answer: (b).* It keeps the team focused on the goal and makes the decision fair and quick.
+
+## At the interviews and assessment centre
+
+- Know the function you applied for and why you want it.
+- Prepare examples using STAR (**S**ituation, **T**ask, **A**ction, **R**esult) for teamwork, leadership, a setback and a time you changed something.
+- At the assessment centre, contribute early in group tasks, listen, and help the group reach a decision on time.
+
+## Frequently asked questions
+
+### Can I retake the Nigerian Breweries online assessment?
+
+No. The official listing says you can complete the online assessment only once, and your result is linked to the first Global Graduate Programme role you applied for in that country.
+
+### What class of degree do I need?
+
+The 2026 listing asked for at least a Second Class Upper (2:1) bachelor's degree in a relevant discipline, plus five O'Level credits including Mathematics and English.
+
+### Do I need NYSC to apply?
+
+Yes. The listing requires completion of the mandatory NYSC, and applicants should be no more than one year after graduation.
+
+### Is the Nigerian Breweries graduate programme open now?
+
+The 2026 intake closed on 22 May 2026. New intakes are posted on the HEINEKEN careers site.
+
+### How long is the programme?
+
+The listing describes an 18-month programme, after which graduates can move into a management role in Nigeria or another HEINEKEN operating company.
+
+## Practise for the test
+
+> Practise timed numerical, verbal and logical reasoning tests, and interview answers with the AI interviewer, in the [CareerOS app](https://play.google.com/store/apps/details?id=com.careeros.careeros&referrer=utm_source%3Dsite%26utm_medium%3Dguide%26utm_campaign%3Dnb_test). The app is free to download on Android.
+
+Official source: [HEINEKEN careers](https://careers.theheinekencompany.com/Global-Graduate-Program).
