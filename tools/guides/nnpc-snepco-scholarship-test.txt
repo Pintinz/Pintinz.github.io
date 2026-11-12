@@ -1,0 +1,117 @@
+title: NNPC/SNEPCo Scholarship Test 2026: How to Prepare, With Practice Questions
+description: What the 2026 NNPC/SNEPCo National University Scholarship test involves, who gets invited, and a two-week plan with worked practice questions for the computer-based test.
+eyebrow: Scholarship tests
+updated: 2026-11-12
+
+The 2026 NNPC/SNEPCo National University Scholarship is run by Shell Nigeria Exploration and Production Company (SNEPCo) for itself, NNPC Limited and its co-venture partners. It pays a yearly grant from your second year until you finish your degree. Applications close on **30 November 2026**, and the next hurdle is a computer-based test. This guide covers what's officially known and how to prepare.
+
+> CareerOS is not affiliated with NNPC, SNEPCo or Scholastica. Every fact about the scheme below comes from the official advert on Scholastica. Confirm details there before you apply.
+
+## Who can apply
+
+The official advert lists four requirements. You must:
+
+- be a Nigerian citizen;
+- be in your **second year** of full-time study at a **public** Nigerian university, on an NUC-accredited course;
+- have a CGPA of at least **3.5 on a 5-point scale** (or the equivalent);
+- not already hold a scholarship from another oil and gas company, Nigerian or international.
+
+Female candidates are strongly encouraged to apply. Applications go through the Scholastica portal only. Email applications are not accepted, and the application is **free**. SNEPCo says it doesn't use agents, so ignore anyone who asks you to pay to "process" your application.
+
+## How selection works
+
+According to the official advert:
+
+1. Only candidates who meet the eligibility criteria are invited to a **proctored (monitored) computer-based test**.
+2. Exam details are sent to shortlisted candidates only, so watch the email address you applied with, including the spam folder.
+3. The **top 10 candidates from each of the 36 states and the FCT** are shortlisted for academic verification before any award.
+4. Scholars must keep a CGPA of at least 3.5 every session to keep the award.
+
+That means you're competing with applicants from your own state, and only ten move on. Your test score decides whether you get through, so preparation matters.
+
+## What the test is likely to cover
+
+SNEPCo doesn't publish a syllabus for the test. Scholarship and graduate computer-based tests in Nigeria commonly include:
+
+- **Numerical reasoning**: percentages, ratios, speed and time, and reading tables.
+- **Verbal reasoning**: reading a short passage and judging whether statements are true, false or can't be determined.
+- **Logical reasoning**: number sequences, patterns and simple deductions.
+
+Treat this as a sensible way to prepare, not a guarantee of the format. If your invitation email names the sections, practise those first.
+
+## Practice questions
+
+These are original CareerOS practice questions written in the style of a scholarship CBT. They are **not** past questions from the real test.
+
+**1. Percentages.** A student's monthly allowance rises from ₦40,000 to ₦46,000. What is the percentage increase?
+
+*Answer: 15%.* The increase is ₦6,000, and 6,000 ÷ 40,000 = 0.15.
+
+**2. Speed and time.** A bus travels 180 km in 2 hours 30 minutes. What is its average speed?
+
+*Answer: 72 km/h.* 2 hours 30 minutes is 2.5 hours, and 180 ÷ 2.5 = 72.
+
+**3. Ratios.** A class of 64 students has boys and girls in the ratio 3 : 5. How many girls are there?
+
+*Answer: 40.* There are 3 + 5 = 8 parts, so each part is 64 ÷ 8 = 8 students, and girls are 5 × 8 = 40.
+
+**4. Number sequence.** What comes next: 2, 6, 12, 20, 30, ?
+
+*Answer: 42.* The gaps grow by 2 each time (4, 6, 8, 10), so the next gap is 12.
+
+**5. Verbal reasoning.** Read the passage, then decide whether each statement is true, false or can't say.
+
+*"The award is open to second-year students in public universities. Applicants must have a CGPA of at least 3.5, and scholars must keep that CGPA every session."*
+
+- Statement A: "A third-year student with a CGPA of 4.2 can apply." *False*: the award is for second-year students.
+- Statement B: "Most applicants study engineering." *Can't say*: the passage doesn't mention courses.
+- Statement C: "A scholar whose CGPA drops to 3.2 may lose the award." *True*: scholars must keep a CGPA of at least 3.5.
+
+**6. Logical deduction.** All interns attend the safety briefing. Some people at the safety briefing are engineers. Does it follow that some interns are engineers?
+
+*Answer: No, it can't be concluded.* The engineers at the briefing might not be interns at all.
+
+## A two-week preparation plan
+
+Shortlisted candidates often get only a short notice period, so start before the invitation arrives.
+
+- **Days 1–2:** take one timed practice set in each area to find your weakest section.
+- **Days 3–7:** spend most of your time on that weakest section. Learn the method, then do short timed sets.
+- **Days 8–11:** mix all sections in timed sets that match the time you're likely to get, about a minute per question.
+- **Days 12–13:** take two full mock tests under exam conditions, with no phone and no breaks.
+- **Day 14:** rest, check your invitation details and prepare what you need to bring.
+
+## On the day
+
+- Read the invitation carefully: the date, time, venue or online link, and the ID you must bring.
+- Arrive early, or log in early for an online test, so a late start doesn't eat your time.
+- Keep an eye on the clock. If a question takes twice your average time, choose your best answer and move on, unless the instructions say wrong answers are penalised.
+- Make sure the names on your documents match your application. The advert says mismatched names need an affidavit or certificate.
+
+## Frequently asked questions
+
+### When is the 2026 NNPC/SNEPCo scholarship test?
+
+SNEPCo hasn't published a date. The advert says exam details will be communicated to shortlisted candidates only, so check the email you applied with, including spam.
+
+### Is the NNPC/SNEPCo scholarship free to apply for?
+
+Yes. The official advert says the application is free and SNEPCo doesn't assign agents or representatives. Never pay anyone to apply on your behalf.
+
+### Are there official NNPC/SNEPCo past questions?
+
+SNEPCo doesn't publish past questions. Be wary of anyone selling "leaked" or "official" past questions. Practising the common test areas is the reliable way to prepare.
+
+### Can private university students apply?
+
+No. The 2026 advert is for students at public Nigerian universities on NUC-accredited courses.
+
+### What CGPA do I need?
+
+At least 3.5 on a 5-point scale (or the equivalent) to apply, and you must keep 3.5 every session to keep the award.
+
+## Practise for the test
+
+> Practise timed numerical, verbal and logical reasoning tests in the [CareerOS app](https://play.google.com/store/apps/details?id=com.careeros.careeros&referrer=utm_source%3Dsite%26utm_medium%3Dguide%26utm_campaign%3Dsnepco_test). The app is free to download on Android and includes mock tests with answer explanations.
+
+Apply on the official portal: [candidate.scholastica.ng/schemes/NNPCLTDSNEPCo26](https://candidate.scholastica.ng/schemes/NNPCLTDSNEPCo26).

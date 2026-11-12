@@ -40,6 +40,10 @@ def render(body: str) -> tuple[str, list[tuple[str, str]]]:
         if not line.strip():
             i += 1
             continue
+        if line.startswith("### "):
+            out.append(f'<h3 id="{slugify(line[4:])}">{inline(line[4:])}</h3>')
+            i += 1
+            continue
         if line.startswith("## "):
             anchor = slugify(line[3:])
             toc.append((anchor, line[3:]))
@@ -60,11 +64,31 @@ def render(body: str) -> tuple[str, list[tuple[str, str]]]:
                 break
         else:
             para = []
-            while i < len(lines) and lines[i].strip() and not re.match(r"^(## |> |- |\d+\. )", lines[i]):
+            while i < len(lines) and lines[i].strip() and not re.match(r"^(#{2,3} |> |- |\d+\. )", lines[i]):
                 para.append(lines[i].strip())
                 i += 1
             out.append("<p>" + "<br>".join(inline(p) for p in para) + "</p>")
     return "\n".join(out), toc
+
+
+def plain(text: str) -> str:
+    """Markdown subset → plain text (for structured data)."""
+    text = re.sub(r"\[([^\]]+)\]\([^)\s]+\)", r"\1", text)
+    return re.sub(r"\*{1,2}([^*]+)\*{1,2}", r"\1", text).strip()
+
+
+def faq_items(body: str) -> list[tuple[str, str]]:
+    """(question, answer) pairs from the "## Frequently asked questions" section, if any."""
+    match = re.search(r"^## Frequently asked questions\s*$(.*?)(?=^## |\Z)", body, flags=re.M | re.S)
+    if not match:
+        return []
+    items = []
+    for block in re.split(r"^### ", match.group(1), flags=re.M)[1:]:
+        question, _, answer = block.partition("\n")
+        answer = " ".join(line.strip() for line in answer.strip().splitlines() if line.strip())
+        if question.strip() and answer:
+            items.append((plain(question), plain(answer)))
+    return items
 
 
 def parse(path: Path) -> dict:
@@ -101,6 +125,11 @@ def build(out: Path) -> int:
             "datePublished": g["updated"], "dateModified": g["updated"], "author": ORG, "publisher": ORG,
             "mainEntityOfPage": f"{SITE}/{path}", "image": f"{SITE}/assets/og-image.png",
         }
+        ld = [crumb_ld, article]
+        faqs = faq_items(g["body"])
+        if faqs:
+            ld.append({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+                {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faqs]})
         # Same-topic guides first, so each article's "read next" differs.
         others = sorted((o for o in guides if o["slug"] != g["slug"]),
                         key=lambda o: (o.get("eyebrow") != g.get("eyebrow"), o["title"]))[:3]
@@ -127,7 +156,7 @@ def build(out: Path) -> int:
 <ul class="guide-cards">{"".join(guide_card(o) for o in others)}</ul></section></div>"""
         (folder / f"{g['slug']}.html").write_text(
             page(title=f"{g['title']} | CareerOS", description=g["description"], path=path, body=body,
-                 ld=[crumb_ld, article], og_type="article"),
+                 ld=ld, og_type="article"),
             encoding="utf-8",
         )
     crumb_html, crumb_ld = breadcrumbs([("CareerOS", ""), ("Guides", "guides/")])

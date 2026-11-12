@@ -344,7 +344,7 @@ def page(*, title: str, description: str, path: str, body: str, ld: list[dict] |
       <a href="{up}companies/">Companies hiring</a><a href="{up}scholarships/">Scholarships</a></nav>
     <nav aria-label="Guides"><h2>Guides</h2>
       <a href="{up}guides/how-to-pass-aptitude-tests.html">Aptitude tests</a><a href="{up}guides/graduate-trainee-interview-questions.html">Interview questions</a>
-      <a href="{up}guides/ats-friendly-cv.html">ATS-friendly CV</a><a href="{up}guides/scholarship-application-tips.html">Scholarship applications</a></nav>
+      <a href="{up}guides/ats-friendly-cv.html">ATS-friendly CV</a><a href="{up}guides/scholarship-application-tips.html">Scholarship applications</a><a href="{up}guides/nnpc-snepco-scholarship-test.html">Scholarship tests</a></nav>
     <nav aria-label="CareerOS"><h2>CareerOS</h2>
       <a href="{up}">About the app</a><a href="{up}privacy.html">Privacy</a><a href="{up}terms.html">Terms</a><a href="mailto:careeros.info@gmail.com">Contact</a><a href="#" class="consent-link" data-consent-settings hidden>Analytics choices</a></nav>
   </div>
@@ -733,6 +733,13 @@ def companies_index(companies: dict[str, list[dict]], info: dict[str, dict]) -> 
 
 # --------------------------------------------------------------------------------------- scholarships
 
+# Scholarships with a selection test and a CareerOS prep guide (slug fragment → guide, link text).
+TEST_GUIDES = {
+    "nnpc-snepco-national-university": ("nnpc-snepco-scholarship-test", "How to prepare for the NNPC/SNEPCo test"),
+    "totalenergies-national-merit": ("totalenergies-scholarship-test", "How to prepare for the TotalEnergies NMSS test"),
+}
+
+
 def scholarship_page(s: dict, others: list[dict]) -> str:
     slug = safe_slug(s["slug"])
     path = f"scholarships/{slug}.html"
@@ -777,8 +784,10 @@ def scholarship_page(s: dict, others: list[dict]) -> str:
             sections.append(f"<h2>{heading}</h2>\n{block}")
     sections.append('<p class="fine">Confirm every detail and deadline on the official page. CareerOS is not the scholarship provider, '
                     "and genuine scholarships never ask you to pay to receive an award.</p>")
+    test_guide = next((g for key, g in TEST_GUIDES.items() if key in slug), None)
+    test_link = f'<li><a href="../guides/{test_guide[0]}.html">{esc(test_guide[1])}</a></li>' if test_guide else ""
     prep = ('<aside class="side-card"><h2>Before you apply</h2><p>Strong applications start early and follow the instructions exactly.</p>'
-            '<ul class="link-list"><li><a href="../guides/scholarship-application-tips.html">How to apply for scholarships abroad</a></li>'
+            f'<ul class="link-list">{test_link}<li><a href="../guides/scholarship-application-tips.html">How to apply for scholarships abroad</a></li>'
             '<li><a href="../guides/ats-friendly-cv.html">Write a clear, focused CV</a></li></ul></aside>')
     more = [o for o in others if o["id"] != s["id"]][:4]
     related = ""

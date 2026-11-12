@@ -1,0 +1,120 @@
+title: TotalEnergies NMSS Scholarship Test 2026: How to Prepare, With Practice Questions
+description: Who can apply for the 2026/2027 NNPC Limited / TotalEnergies National Merit Scholarship, how the selection test works, and worked practice questions to prepare.
+eyebrow: Scholarship tests
+updated: 2026-11-12
+
+The NNPC Limited / TotalEnergies National Merit Scholarship Scheme (NMSS) supports first- and second-year undergraduates in any course with a yearly grant from the year of award until graduation. Applications for the 2026/2027 session are open from **10 November to 7 December 2026**, and shortlisted candidates then sit a selection test. Here's what's officially known and how to get ready.
+
+> CareerOS is not affiliated with NNPC Limited or TotalEnergies. Facts about the scheme below come from the official TotalEnergies scholarship portal. Confirm details there before you apply.
+
+## Who can apply
+
+According to the official portal, you must:
+
+- be a Nigerian student registered for full-time undergraduate study at an NUC-accredited Nigerian university;
+- be a certified **100-level or 200-level** student when you apply;
+- have a UTME score of at least **200**;
+- if you're in 200 level, have a CGPA of at least **2.5 on a 5.0 scale**.
+
+You can't apply if you're in 300 level or above, or if you already hold a similar award from a company in the oil and gas industry. Any course of study is accepted.
+
+Applications are made online through the TotalEnergies scholarship website only; don't send applications by email. The application is **completely free**: TotalEnergies says it doesn't ask for payment or accredit agents to act for it.
+
+## How selection works
+
+The official portal says:
+
+1. Applications are online only, through the scholarship website.
+2. **Only shortlisted candidates are invited to selection tests.**
+3. TotalEnergies may change the schedule or the selection test process.
+
+So after you apply, keep checking the email address and account you applied with. Because the schedule can change, prepare early rather than waiting for the invitation.
+
+## What the test is likely to cover
+
+TotalEnergies doesn't publish a syllabus for the NMSS test. Undergraduate scholarship tests in Nigeria commonly include:
+
+- **Numerical reasoning**: percentages, fractions, ratios, simple interest and word problems.
+- **Verbal reasoning**: vocabulary, comprehension and choosing the correct word or meaning.
+- **Logical reasoning**: number and letter sequences and odd-one-out questions.
+
+Use this as a practical plan, not a promise about the exact format. If your invitation names the sections, focus on those.
+
+## Practice questions
+
+These are original CareerOS practice questions written in the style of an undergraduate scholarship test. They are **not** past questions from the real NMSS test.
+
+**1. Percentages.** What is 25% of 360?
+
+*Answer: 90.* 25% is a quarter, and 360 ÷ 4 = 90.
+
+**2. Simple interest.** ₦50,000 is saved at 10% simple interest per year. How much interest is earned after 3 years?
+
+*Answer: ₦15,000.* One year's interest is 10% of ₦50,000 = ₦5,000, and 3 × ₦5,000 = ₦15,000.
+
+**3. Proportion.** If 4 pens cost ₦600, how much do 10 pens cost?
+
+*Answer: ₦1,500.* One pen costs ₦600 ÷ 4 = ₦150, and 10 × ₦150 = ₦1,500.
+
+**4. Sequences.** What comes next: 3, 9, 27, 81, ?
+
+*Answer: 243.* Each number is three times the one before it.
+
+**5. Odd one out.** Lagos, Kano, Ghana, Ibadan, Enugu.
+
+*Answer: Ghana.* It's a country; the others are Nigerian cities.
+
+**6. Vocabulary.** Choose the word closest in meaning to **meticulous**: (a) careless (b) careful (c) quick (d) noisy.
+
+*Answer: (b) careful.* Meticulous means paying close attention to every detail.
+
+**7. Comprehension.** *"The scheme supports first- and second-year undergraduates irrespective of course of study."* Which statement is supported by the sentence?
+
+- (a) Only science students can apply.
+- (b) Students in any course can apply.
+- (c) Final-year students can apply.
+
+*Answer: (b).* "Irrespective of course of study" means the course doesn't matter.
+
+## A two-week preparation plan
+
+- **Days 1–2:** take a short timed test in each area and note where you lose the most marks.
+- **Days 3–6:** rebuild the basics in your weakest area, such as percentages, fractions or vocabulary, then do short timed drills.
+- **Days 7–10:** mix all areas in timed sets of 20–30 questions.
+- **Days 11–13:** take full mock tests under exam conditions and review every wrong answer.
+- **Day 14:** rest, re-read the invitation and get your documents ready.
+
+## On the day
+
+- Check the invitation for the date, time, venue or link, and what you must bring.
+- Arrive or log in early so a slow start doesn't cost you time.
+- Answer the questions you're sure of first, then return to the hard ones if the test lets you.
+- Don't spend too long on one question; keep moving and come back if you have time.
+
+## Frequently asked questions
+
+### When does the 2026/2027 TotalEnergies NMSS application close?
+
+The official portal lists **7 December 2026** as the closing date. Applications opened on 10 November 2026.
+
+### Is the TotalEnergies scholarship free to apply for?
+
+Yes. The official portal says scholarship applications are completely free and that TotalEnergies doesn't request payment or accredit agents.
+
+### Can 300-level students apply?
+
+No. The NMSS is for certified 100-level and 200-level students. Students in 300 level or above should not apply.
+
+### What UTME score do I need for the TotalEnergies scholarship?
+
+At least 200. If you're in 200 level, you also need a CGPA of at least 2.5 on a 5.0 scale.
+
+### Are there official TotalEnergies NMSS past questions?
+
+TotalEnergies doesn't publish past questions. Be wary of anyone selling "leaked" questions; practising the common test areas is the reliable way to prepare.
+
+## Practise for the test
+
+> Practise timed numerical, verbal and logical reasoning tests in the [CareerOS app](https://play.google.com/store/apps/details?id=com.careeros.careeros&referrer=utm_source%3Dsite%26utm_medium%3Dguide%26utm_campaign%3Dtotalenergies_test). The app is free to download on Android and includes mock tests with answer explanations.
+
+Apply on the official portal: [csr-ngscholarship.totalenergies.com](https://csr-ngscholarship.totalenergies.com/scholarships/nmss).
