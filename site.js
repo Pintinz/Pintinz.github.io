@@ -39,6 +39,41 @@
   });
 })();
 
+// Mobile "Get the app" bar: phones only (not iPhone/iPad; the app is Android-only), after the reader
+// scrolls a little, never on top of the analytics question or the "Get CareerOS" panel above the
+// footer. Closing it hides it for 7 days (kept in this browser only; nothing is sent).
+(function () {
+  var bar = document.querySelector('[data-appbar]');
+  if (!bar) return;
+  var KEY = 'cos_appbar_closed', WEEK = 7 * 24 * 3600 * 1000;
+  var closedAt = 0;
+  try { closedAt = Number(window.localStorage.getItem(KEY)) || 0; } catch (e) {}
+  var phone = window.matchMedia('(max-width: 760px)');
+  if (/iPhone|iPad|iPod/i.test(navigator.userAgent) || Date.now() - closedAt < WEEK) return;
+
+  var panelInView = false, closed = false;
+  var panel = document.querySelector('.getapp');
+  if (panel && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      panelInView = entries[0].isIntersecting; update();
+    }).observe(panel);
+  }
+  function update() {
+    var show = !closed && phone.matches && window.scrollY > 400 && !panelInView && !document.querySelector('.consent');
+    bar.hidden = !show;
+    document.body.classList.toggle('has-appbar', show);
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  phone.addEventListener('change', update);
+  // The consent box is added and removed by the analytics script below.
+  new MutationObserver(update).observe(document.body, { childList: true });
+  bar.querySelector('[data-appbar-close]').addEventListener('click', function () {
+    closed = true; update();
+    try { window.localStorage.setItem(KEY, String(Date.now())); } catch (e) {}
+  });
+  update();
+})();
+
 // Website analytics (first-party, CareerOS's own server; no third-party scripts).
 // - Asks once. "Accept" keeps a random visitor id in this browser so return visits join up;
 //   "Decline" (or Global Privacy Control) keeps nothing, and page views are counted with no identifier.

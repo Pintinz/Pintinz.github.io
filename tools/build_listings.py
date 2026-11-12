@@ -83,6 +83,29 @@ TODAY = datetime.now(timezone.utc).date()
 GOOGLE_PLAY_BADGE = "https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
 
 
+def play(campaign: str, placement: str) -> str:
+    """Google Play link tagged so Play Console's acquisition report shows which pages bring installs.
+
+    campaign = the kind of page (job, scholarship, a guide's slug…); placement = where on it (utm_medium).
+    """
+    referrer = urllib.parse.urlencode({"utm_source": "site", "utm_medium": placement, "utm_campaign": campaign})
+    return f"{PLAY}&referrer={urllib.parse.quote(referrer, safe='')}"
+
+
+def campaign_for(path: str) -> str:
+    """Site path → short campaign name: jobs/x.html → job, jobs/in-nigeria.html → jobs_country, guides/x.html → x."""
+    folder, _, name = path.partition("/")
+    name = name.removesuffix(".html")
+    if folder == "guides" and name:
+        return name.replace("-", "_")[:60]
+    singular = {"jobs": "job", "companies": "company", "scholarships": "scholarship"}.get(folder, folder or "home")
+    if not name:
+        return f"{folder or 'home'}_hub"
+    if folder == "jobs" and name.startswith("in-"):
+        return "jobs_country"
+    return singular
+
+
 # --------------------------------------------------------------------------------------- fetching
 
 def _get(path: str, params: dict | None = None, *, tries: int = 6):
@@ -293,6 +316,7 @@ def page(*, title: str, description: str, path: str, body: str, ld: list[dict] |
         f'<script type="application/ld+json">{json.dumps(item, ensure_ascii=False)}</script>\n' for item in (ld or [])
     )
     year = datetime.now(timezone.utc).year
+    campaign = campaign_for(path)
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -326,18 +350,25 @@ def page(*, title: str, description: str, path: str, body: str, ld: list[dict] |
       <a href="{up}scholarships/">Scholarships</a>
       <a href="{up}guides/">Guides</a>
     </nav>
-    <a class="top-cta" href="{PLAY}">Get the app</a>
+    <a class="top-cta" href="{play(campaign, 'header')}">Get the app</a>
   </div>
 </header>
 <main id="main">
 {body}
+{get_app_band(campaign, up)}
 </main>
+<div class="appbar" data-appbar hidden>
+  <img src="{up}assets/careeros-symbol.png" alt="" width="36" height="36">
+  <p><strong>CareerOS</strong><span>Free on Android</span></p>
+  <a class="appbar-cta" href="{play(campaign, 'bar')}">Get the app</a>
+  <button type="button" class="appbar-close" data-appbar-close aria-label="Close">&times;</button>
+</div>
 <footer class="foot">
   <div class="wrap foot-grid">
     <div class="foot-brand">
       <img src="{up}assets/careeros-wordmark-on-dark.png" alt="CareerOS" width="164" height="28" loading="lazy">
       <p>Jobs, scholarships and the preparation to land them. Free on Android.</p>
-      <a href="{PLAY}"><img class="foot-badge" src="{GOOGLE_PLAY_BADGE}" alt="Get it on Google Play" width="646" height="250" loading="lazy"></a>
+      <a href="{play(campaign, 'footer')}"><img class="foot-badge" src="{GOOGLE_PLAY_BADGE}" alt="Get it on Google Play" width="646" height="250" loading="lazy"></a>
     </div>
     <nav aria-label="Opportunities"><h2>Opportunities</h2>
       <a href="{up}jobs/in-nigeria.html">Jobs in Nigeria</a><a href="{up}jobs/">All jobs by country</a>
@@ -354,6 +385,30 @@ def page(*, title: str, description: str, path: str, body: str, ld: list[dict] |
 </body>
 </html>
 """
+
+
+APP_FEATURES = (
+    ("Live jobs and scholarships", "Save them and get a reminder before they close."),
+    ("Timed aptitude tests", "Numerical, verbal and logical practice with worked answers."),
+    ("Interview and CV practice", "Mock interviews and an ATS check for your CV."),
+)
+
+
+def get_app_band(campaign: str, up: str) -> str:
+    """'Get CareerOS on your phone' panel above the footer: QR to scan on desktop, Play badge everywhere."""
+    features = "".join(f"<li><strong>{esc(t)}</strong><span>{esc(d)}</span></li>" for t, d in APP_FEATURES)
+    return f"""<div class="wrap"><section class="getapp" aria-labelledby="getapp-title">
+  <div class="getapp-text">
+    <p class="getapp-eyebrow">Free on Android</p>
+    <h2 id="getapp-title">Get CareerOS on your phone</h2>
+    <ul class="getapp-list">{features}</ul>
+    <a class="getapp-badge" href="{play(campaign, 'band')}"><img src="{GOOGLE_PLAY_BADGE}" alt="Get it on Google Play" width="646" height="250" loading="lazy"></a>
+  </div>
+  <figure class="getapp-qr">
+    <img src="{up}assets/qr-site-play.svg" alt="QR code that opens CareerOS on Google Play" width="148" height="148" loading="lazy">
+    <figcaption>Scan with your phone's camera</figcaption>
+  </figure>
+</section></div>"""
 
 
 def breadcrumbs(items: list[tuple[str, str]]) -> tuple[str, dict]:
@@ -377,7 +432,7 @@ def app_card(kind: str, slug: str, heading: str, text: str, up: str = "../") -> 
   <h2>{esc(heading)}</h2>
   <p>{esc(text)}</p>
   <a class="btn btn-ghost" href="{app_link(kind, slug)}" data-android-only>Open in the app</a>
-  <a class="play" href="{PLAY}"><img src="{GOOGLE_PLAY_BADGE}" alt="Get it on Google Play" width="646" height="250" loading="lazy"></a>
+  <a class="play" href="{play({'jobs': 'job', 'scholarships': 'scholarship'}.get(kind, kind), 'card')}"><img src="{GOOGLE_PLAY_BADGE}" alt="Get it on Google Play" width="646" height="250" loading="lazy"></a>
 </aside>"""
 
 

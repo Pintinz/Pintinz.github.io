@@ -26,7 +26,7 @@ def inline(text: str) -> str:
     text = html.escape(text, quote=False)
     text = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", text)
     text = re.sub(r"(?<![*\w])\*(?!\s)(.+?)(?<!\s)\*(?!\w)", r"<em>\1</em>", text)
-    return re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", lambda m: f'<a href="{html.escape(m.group(2))}">{m.group(1)}</a>', text)
+    return re.sub(r"\[([^\]]+)\]\(([^)\s]+)\)", lambda m: f'<a href="{html.escape(html.unescape(m.group(2)))}">{m.group(1)}</a>', text)
 
 
 def render(body: str) -> tuple[str, list[tuple[str, str]]]:
@@ -149,7 +149,7 @@ def build(out: Path) -> int:
   </article>
   <div class="side">
 {toc_html}
-{app_card_plain()}
+{app_card_plain(g['slug'])}
   </div>
 </div>
 <div class="wrap"><section class="related"><div class="related-head"><h2>Read next</h2><a href="./">All guides</a></div>
@@ -175,14 +175,14 @@ def build(out: Path) -> int:
     return len(guides)
 
 
-def app_card_plain() -> str:
+def app_card_plain(slug: str) -> str:
     """App promo without a per-listing deep link (guides aren't listings)."""
-    from build_listings import GOOGLE_PLAY_BADGE, PLAY
+    from build_listings import GOOGLE_PLAY_BADGE, campaign_for, play
     return f"""<aside class="side-card app-card">
   <img class="app-mark" src="../assets/careeros-symbol.png" alt="" width="40" height="40">
   <h2>Practise it in CareerOS</h2>
   <p>Timed aptitude tests, AI interview practice, CV checks and live jobs and scholarships. Free on Android.</p>
-  <a class="play" href="{PLAY}"><img src="{GOOGLE_PLAY_BADGE}" alt="Get it on Google Play" width="646" height="250" loading="lazy"></a>
+  <a class="play" href="{play(campaign_for(f'guides/{slug}.html'), 'card')}"><img src="{GOOGLE_PLAY_BADGE}" alt="Get it on Google Play" width="646" height="250" loading="lazy"></a>
 </aside>"""
 
 

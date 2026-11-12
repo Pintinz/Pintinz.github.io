@@ -254,6 +254,34 @@ a.ticket-company:hover { color: var(--blue); }
 .consent-actions button:focus-visible { outline: 3px solid #9DC0FF; outline-offset: 2px; }
 .consent-link { background: none; border: 0; padding: 0; font: inherit; color: inherit; text-decoration: underline; cursor: pointer; }
 
+/* ---------------------------------------------------- Get the app: band above the footer + mobile bar */
+.getapp { display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center; margin-top: 56px;
+  padding: 32px 36px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); }
+.getapp-eyebrow { margin: 0 0 6px; font-family: var(--label); font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue); }
+.getapp h2 { margin: 0 0 18px; color: var(--ink); font-size: 26px; line-height: 1.2; }
+.getapp-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px 24px; margin: 0 0 20px; padding: 0; list-style: none; }
+.getapp-list li { padding-left: 14px; border-left: 3px solid var(--blue); font-size: 14.5px; line-height: 1.45; }
+.getapp-list strong { display: block; color: var(--ink); font-weight: 650; }
+.getapp-badge img { display: block; width: 168px; height: auto; margin-left: -10px; }
+.getapp-qr { margin: 0; padding: 14px 14px 10px; border: 1px solid var(--line); border-radius: 12px; background: #fff; text-align: center; }
+.getapp-qr img { display: block; width: 148px; height: 148px; }
+.getapp-qr figcaption { margin-top: 6px; font-size: 12.5px; color: var(--muted); }
+
+.appbar { position: fixed; z-index: 50; left: 12px; right: 12px; bottom: 12px; display: flex; align-items: center; gap: 12px;
+  padding: 10px 10px 10px 12px; border-radius: 14px; background: var(--navy); color: #C9D5E3;
+  box-shadow: 0 12px 32px rgba(11, 31, 51, 0.32); transform: translateY(0); transition: transform .25s ease, opacity .25s ease; }
+.appbar[hidden] { display: none; }
+.appbar img { flex: none; border-radius: 9px; background: #fff; }
+.appbar p { flex: 1; min-width: 0; margin: 0; font-size: 13px; line-height: 1.35; }
+.appbar p strong { display: block; color: #fff; font-size: 14.5px; }
+.appbar-cta { flex: none; display: inline-flex; align-items: center; min-height: 40px; padding: 0 14px; border-radius: 10px;
+  background: var(--blue); color: #fff; font-weight: 600; font-size: 14px; text-decoration: none; }
+.appbar-cta:hover { background: var(--blue-hover); color: #fff; }
+.appbar-close { flex: none; width: 32px; height: 32px; border: 0; border-radius: 8px; background: transparent; color: #9FB3C8; font-size: 22px; line-height: 1; cursor: pointer; }
+.appbar-close:hover { color: #fff; background: rgba(255,255,255,.08); }
+.appbar-close:focus-visible, .appbar-cta:focus-visible { outline: 3px solid #9DC0FF; outline-offset: 2px; }
+body.has-appbar .foot { padding-bottom: 84px; }
+
 /* ------------------------------------------------------------- responsive */
 @media (max-width: 960px) {
   .layout { grid-template-columns: 1fr; }
@@ -261,6 +289,7 @@ a.ticket-company:hover { color: var(--blue); }
   .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .foot-grid { grid-template-columns: 1fr 1fr; }
   .foot-brand { grid-column: 1 / -1; }
+  .getapp-list { grid-template-columns: 1fr; gap: 10px; }
 }
 @media (max-width: 760px) {
   :root { --gutter: 16px; }
@@ -292,6 +321,10 @@ a.ticket-company:hover { color: var(--blue); }
   .band-org { gap: 14px; }
   .logo-xl { width: 64px; height: 64px; }
   .foot-grid { gap: 28px 20px; }
+  .getapp { grid-template-columns: 1fr; margin-top: 40px; padding: 24px 20px; }
+  .getapp h2 { font-size: 22px; }
+  .getapp-list { grid-template-columns: 1fr; gap: 12px; }
+  .getapp-qr { display: none; } /* you can't scan the phone you're reading on */
 }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
