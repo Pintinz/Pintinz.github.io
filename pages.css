@@ -331,3 +331,29 @@ body.has-appbar .foot { padding-bottom: 84px; }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
 }
+
+/* Campus forms (campus/*.html, tools/build_campus.py) */
+.campus-form { display: grid; gap: 18px; margin-top: 8px; max-width: 620px; }
+.field { display: grid; gap: 6px; margin: 0; padding: 0; border: 0; min-width: 0; }
+.field label, .field legend { font-weight: 600; color: var(--ink); font-size: 15px; padding: 0; }
+.field-optional { font-weight: 400; color: var(--muted); }
+.field-hint { font-size: 13px; color: var(--muted); margin-top: -2px; }
+.field input, .field select, .field textarea {
+  font: inherit; font-size: 16px; color: var(--ink); background: var(--surface); width: 100%;
+  border: 1px solid #C9D2DE; border-radius: 10px; padding: 11px 12px;
+}
+.field textarea { resize: vertical; min-height: 96px; }
+.field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { outline: 3px solid #BFD3F6; outline-offset: 1px; border-color: var(--blue); }
+.field input:user-invalid, .field select:user-invalid { border-color: var(--warn); }
+.check { display: flex; align-items: center; gap: 10px; font-weight: 400 !important; margin-top: 4px; }
+.check input { width: 18px; height: 18px; accent-color: var(--blue); }
+.campus-form .btn { justify-self: start; }
+.campus-form .btn:disabled { opacity: .6; cursor: progress; }
+.form-status { margin: 0; min-height: 1px; font-size: 14px; color: var(--body); }
+.form-status.is-error { color: var(--warn); font-weight: 600; }
+.form-privacy { margin: 0; font-size: 13px; color: var(--muted); }
+.form-done { margin-top: 8px; padding: 20px 22px; border-radius: var(--radius); background: var(--ok-bg); color: var(--ok); }
+.form-done h2 { margin: 0 0 6px !important; color: var(--ok); font-size: 19px; }
+.form-done p { margin: 0; color: var(--ink); }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+@media (max-width: 760px) { .campus-form .btn { justify-self: stretch; } }

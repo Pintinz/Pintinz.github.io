@@ -378,7 +378,7 @@ def page(*, title: str, description: str, path: str, body: str, ld: list[dict] |
       <a href="{up}guides/how-to-pass-aptitude-tests.html">Aptitude tests</a><a href="{up}guides/graduate-trainee-interview-questions.html">Interview questions</a>
       <a href="{up}guides/ats-friendly-cv.html">ATS-friendly CV</a><a href="{up}guides/scholarship-application-tips.html">Scholarship applications</a><a href="{up}guides/nnpc-snepco-scholarship-test.html">Scholarship tests</a><a href="{up}guides/nnpc-aptitude-test.html">NNPC aptitude test</a></nav>
     <nav aria-label="CareerOS"><h2>CareerOS</h2>
-      <a href="{up}">About the app</a><a href="{WHATSAPP_CHANNEL}" target="_blank" rel="noopener">WhatsApp Channel</a><a href="{up}privacy.html">Privacy</a><a href="{up}terms.html">Terms</a><a href="mailto:careeros.info@gmail.com">Contact</a><a href="#" class="consent-link" data-consent-settings hidden>Analytics choices</a></nav>
+      <a href="{up}">About the app</a><a href="{WHATSAPP_CHANNEL}" target="_blank" rel="noopener">WhatsApp Channel</a><a href="{up}campus/ambassadors.html">Campus ambassadors</a><a href="{up}campus/sessions.html">Free sessions</a><a href="{up}privacy.html">Privacy</a><a href="{up}terms.html">Terms</a><a href="mailto:careeros.info@gmail.com">Contact</a><a href="#" class="consent-link" data-consent-settings hidden>Analytics choices</a></nav>
   </div>
   <div class="wrap foot-base"><span>&copy; {year} CareerOS</span><span>CareerOS is not the employer or scholarship provider for listings shown here.</span></div>
 </footer>
@@ -941,6 +941,9 @@ def build(out: Path, jobs: list[dict], scholarships: list[dict]) -> dict:
     for static in ("privacy.html", "terms.html", "refund.html"):
         if (out / static).exists():
             urls.append((static, None))
+    campus = out / "campus"
+    if campus.exists():
+        urls.extend((f"campus/{p.name}", None) for p in sorted(campus.glob("*.html")))
     guides = out / "guides"
     if guides.exists():
         urls.append(("guides/", None))

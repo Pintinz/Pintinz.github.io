@@ -29,6 +29,8 @@ jobs:
           python-version: "3.12"
       - name: Build guides
         run: python tools/build_guides.py
+      - name: Build campus pages
+        run: python tools/build_campus.py
       - name: Build listing pages and sitemap
         run: python tools/build_listings.py
       - uses: actions/upload-pages-artifact@v3
