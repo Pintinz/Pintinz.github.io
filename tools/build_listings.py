@@ -39,6 +39,7 @@ API = "https://p01--careeros-api--szyhwlzghlw2.code.run/api/v1"
 SITE = "https://pintinz.github.io"
 PLAY = "https://play.google.com/store/apps/details?id=com.careeros.careeros"
 PACKAGE = "com.careeros.careeros"
+WHATSAPP_CHANNEL = "https://whatsapp.com/channel/0029Vb968xUBVJl8TiIpG80P"
 UA = "CareerOS-site-builder/1.0"
 MAX_JOBS = 3000
 MAX_SCHOLARSHIPS = 1000
@@ -377,7 +378,7 @@ def page(*, title: str, description: str, path: str, body: str, ld: list[dict] |
       <a href="{up}guides/how-to-pass-aptitude-tests.html">Aptitude tests</a><a href="{up}guides/graduate-trainee-interview-questions.html">Interview questions</a>
       <a href="{up}guides/ats-friendly-cv.html">ATS-friendly CV</a><a href="{up}guides/scholarship-application-tips.html">Scholarship applications</a><a href="{up}guides/nnpc-snepco-scholarship-test.html">Scholarship tests</a><a href="{up}guides/nnpc-aptitude-test.html">NNPC aptitude test</a></nav>
     <nav aria-label="CareerOS"><h2>CareerOS</h2>
-      <a href="{up}">About the app</a><a href="{up}privacy.html">Privacy</a><a href="{up}terms.html">Terms</a><a href="mailto:careeros.info@gmail.com">Contact</a><a href="#" class="consent-link" data-consent-settings hidden>Analytics choices</a></nav>
+      <a href="{up}">About the app</a><a href="{WHATSAPP_CHANNEL}" target="_blank" rel="noopener">WhatsApp Channel</a><a href="{up}privacy.html">Privacy</a><a href="{up}terms.html">Terms</a><a href="mailto:careeros.info@gmail.com">Contact</a><a href="#" class="consent-link" data-consent-settings hidden>Analytics choices</a></nav>
   </div>
   <div class="wrap foot-base"><span>&copy; {year} CareerOS</span><span>CareerOS is not the employer or scholarship provider for listings shown here.</span></div>
 </footer>
@@ -403,6 +404,7 @@ def get_app_band(campaign: str, up: str) -> str:
     <h2 id="getapp-title">Get CareerOS on your phone</h2>
     <ul class="getapp-list">{features}</ul>
     <a class="getapp-badge" href="{play(campaign, 'band')}"><img src="{GOOGLE_PLAY_BADGE}" alt="Get it on Google Play" width="646" height="250" loading="lazy"></a>
+    <p class="getapp-channel">New jobs and scholarships every morning: <a href="{WHATSAPP_CHANNEL}" target="_blank" rel="noopener">follow CareerOS on WhatsApp</a></p>
   </div>
   <figure class="getapp-qr">
     <img src="{up}assets/qr-site-play.svg" alt="QR code that opens CareerOS on Google Play" width="148" height="148" loading="lazy">

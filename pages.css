@@ -263,6 +263,7 @@ a.ticket-company:hover { color: var(--blue); }
 .getapp-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px 24px; margin: 0 0 20px; padding: 0; list-style: none; }
 .getapp-list li { padding-left: 14px; border-left: 3px solid var(--blue); font-size: 14.5px; line-height: 1.45; }
 .getapp-list strong { display: block; color: var(--ink); font-weight: 650; }
+.getapp-channel { margin: 12px 0 0; font-size: 14.5px; }
 .getapp-badge img { display: block; width: 168px; height: auto; margin-left: -10px; }
 .getapp-qr { margin: 0; padding: 14px 14px 10px; border: 1px solid var(--line); border-radius: 12px; background: #fff; text-align: center; }
 .getapp-qr img { display: block; width: 148px; height: 148px; }
