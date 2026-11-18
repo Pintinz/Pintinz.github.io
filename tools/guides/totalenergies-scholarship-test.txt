@@ -5,7 +5,7 @@ updated: 2026-11-12
 
 The NNPC Limited / TotalEnergies National Merit Scholarship Scheme (NMSS) supports first- and second-year undergraduates in any course with a yearly grant from the year of award until graduation. Applications for the 2026/2027 session are open from **10 November to 7 December 2026**, and shortlisted candidates then sit a selection test. Here's what's officially known and how to get ready.
 
-> CareerOS is not affiliated with NNPC Limited or TotalEnergies. Facts about the scheme below come from the official TotalEnergies scholarship portal. Confirm details there before you apply.
+> Noetra Careers is not affiliated with NNPC Limited or TotalEnergies. Facts about the scheme below come from the official TotalEnergies scholarship portal. Confirm details there before you apply.
 
 ## Who can apply
 
@@ -42,7 +42,7 @@ Use this as a practical plan, not a promise about the exact format. If your invi
 
 ## Practice questions
 
-These are original CareerOS practice questions written in the style of an undergraduate scholarship test. They are **not** past questions from the real NMSS test.
+These are original Noetra Careers practice questions written in the style of an undergraduate scholarship test. They are **not** past questions from the real NMSS test.
 
 **1. Percentages.** What is 25% of 360?
 
@@ -115,6 +115,6 @@ TotalEnergies doesn't publish past questions. Be wary of anyone selling "leaked"
 
 ## Practise for the test
 
-> Practise timed numerical, verbal and logical reasoning tests in the [CareerOS app](https://play.google.com/store/apps/details?id=com.careeros.careeros&referrer=utm_source%3Dsite%26utm_medium%3Dguide%26utm_campaign%3Dtotalenergies_test). The app is free to download on Android and includes mock tests with answer explanations.
+> Practise timed numerical, verbal and logical reasoning tests in the [Noetra Careers app](https://play.google.com/store/apps/details?id=com.careeros.careeros&referrer=utm_source%3Dsite%26utm_medium%3Dguide%26utm_campaign%3Dtotalenergies_test). The app is free to download on Android and includes mock tests with answer explanations.
 
 Apply on the official portal: [csr-ngscholarship.totalenergies.com](https://csr-ngscholarship.totalenergies.com/scholarships/nmss).

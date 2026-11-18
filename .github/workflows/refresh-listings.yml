@@ -1,4 +1,4 @@
-# Rebuilds the job and scholarship pages from the live CareerOS API every day (and on every push),
+# Rebuilds the job and scholarship pages from the live Noetra Careers API every day (and on every push),
 # then publishes the whole site to GitHub Pages. One-time setup: repository Settings → Pages →
 # Build and deployment → Source: "GitHub Actions".
 name: Build and publish site

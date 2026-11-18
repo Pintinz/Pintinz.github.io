@@ -30,7 +30,7 @@
   });
 })();
 
-// "Open in the app" uses an Android intent link (opens CareerOS, or Google Play if it isn't
+// "Open in the app" uses an Android intent link (opens Noetra Careers, or Google Play if it isn't
 // installed); elsewhere it would do nothing, so it's hidden and the Play badge remains.
 (function () {
   var android = /Android/i.test(navigator.userAgent);
@@ -40,7 +40,7 @@
 })();
 
 // Mobile "Get the app" bar: phones only (not iPhone/iPad; the app is Android-only), after the reader
-// scrolls a little, never on top of the analytics question or the "Get CareerOS" panel above the
+// scrolls a little, never on top of the analytics question or the "Get Noetra Careers" panel above the
 // footer. Closing it hides it for 7 days (kept in this browser only; nothing is sent).
 (function () {
   var bar = document.querySelector('[data-appbar]');
@@ -74,7 +74,7 @@
   update();
 })();
 
-// Website analytics (first-party, CareerOS's own server; no third-party scripts).
+// Website analytics (first-party, Noetra's own server; no third-party scripts).
 // - Asks once. "Accept" keeps a random visitor id in this browser so return visits join up;
 //   "Decline" (or Global Privacy Control) keeps nothing, and page views are counted with no identifier.
 // - Sends: the page, its title, how long it was visible, links clicked to other sites, and on a new
@@ -138,7 +138,7 @@
       ['source', 'medium', 'campaign'].forEach(function (k) { var v = q.get('utm_' + k); if (v) utm[k] = v.slice(0, 120); });
       if (utm.source || utm.medium || utm.campaign) extra.utm = utm;
     }
-    send([{ k: 'view', id: viewId, p: path, t: document.title.replace(/\s*\|\s*CareerOS\s*$/, '').slice(0, 160) }], extra);
+    send([{ k: 'view', id: viewId, p: path, t: document.title.replace(/\s*\|\s*Noetra Careers\s*$/, '').slice(0, 160) }], extra);
   }
 
   function flush() {

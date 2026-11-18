@@ -47,4 +47,4 @@ A STAR answer should take about 90 seconds to 2 minutes. Practise saying your st
 
 See also: [15 common graduate trainee interview questions](graduate-trainee-interview-questions.html).
 
-> The CareerOS AI interviewer asks you competency questions out loud and gives feedback on your structure, clarity and examples, with STAR coaching after each answer.
+> The Noetra AI interviewer asks you competency questions out loud and gives feedback on your structure, clarity and examples, with STAR coaching after each answer.

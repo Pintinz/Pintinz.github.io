@@ -5,7 +5,7 @@ updated: 2026-11-12
 
 NNPC Limited recruits graduate trainees and experienced hires through its own careers portal, and the computer-based test (CBT) is the stage that decides who reaches an interview. This guide sets out the official stages, what the test is likely to cover, and how to prepare.
 
-> CareerOS is not affiliated with NNPC Limited. Facts about the recruitment process below come from the official NNPC careers portal. Confirm details there before you apply.
+> Noetra Careers is not affiliated with NNPC Limited. Facts about the recruitment process below come from the official NNPC careers portal. Confirm details there before you apply.
 
 ## How NNPC recruitment works
 
@@ -35,7 +35,7 @@ Some candidates also report questions on general knowledge or their own discipli
 
 ## Practice questions
 
-These are original CareerOS practice questions in the style of a graduate CBT. They are **not** past questions from the real NNPC test.
+These are original Noetra Careers practice questions in the style of a graduate CBT. They are **not** past questions from the real NNPC test.
 
 **1. Percentages.** A depot's stock falls from 2,500,000 litres to 2,150,000 litres. What is the percentage fall?
 
@@ -104,6 +104,6 @@ NNPC doesn't publish past questions. Be wary of anyone selling "leaked" question
 
 ## Practise for the test
 
-> Practise timed numerical, verbal and logical reasoning tests in the [CareerOS app](https://play.google.com/store/apps/details?id=com.careeros.careeros&referrer=utm_source%3Dsite%26utm_medium%3Dguide%26utm_campaign%3Dnnpc_test). The app is free to download on Android and includes mock tests with answer explanations.
+> Practise timed numerical, verbal and logical reasoning tests in the [Noetra Careers app](https://play.google.com/store/apps/details?id=com.careeros.careeros&referrer=utm_source%3Dsite%26utm_medium%3Dguide%26utm_campaign%3Dnnpc_test). The app is free to download on Android and includes mock tests with answer explanations.
 
 Official careers portal: [careers.nnpcgroup.com](https://careers.nnpcgroup.com/journey).

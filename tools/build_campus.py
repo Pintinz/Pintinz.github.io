@@ -1,6 +1,6 @@
 """Builds the campus pages: campus/ambassadors.html (apply to be a campus ambassador) and
 campus/sessions.html (career centres, NYSC CDS groups and student associations request a free
-session). The forms post to the CareerOS API (/api/v1/campus/...), handled by campus.js.
+session). The forms post to the Noetra Careers API (/api/v1/campus/...), handled by campus.js.
 
     python tools/build_campus.py
 """
@@ -44,20 +44,20 @@ def form(endpoint: str, fields: str, submit: str, success: str) -> str:
 
 
 def ambassadors() -> str:
-    crumbs, ld = breadcrumbs([("CareerOS", ""), ("Campus ambassadors", "campus/ambassadors.html")])
+    crumbs, ld = breadcrumbs([("Noetra Careers", ""), ("Campus ambassadors", "campus/ambassadors.html")])
     head = band(crumbs + """
 <p class="band-eyebrow">Campus ambassadors</p>
-<h1>Become a CareerOS campus ambassador</h1>
-<p class="band-sub">Help students on your campus find real jobs and scholarships and prepare for aptitude tests and interviews, and earn CareerOS credits for every friend who joins.</p>""")
+<h1>Become a Noetra campus ambassador</h1>
+<p class="band-sub">Help students on your campus find real jobs and scholarships and prepare for aptitude tests and interviews, and earn Noetra credits for every friend who joins.</p>""")
     fields = "".join([
         field("full_name", "Full name", required=True, autocomplete="name", maxlength=120),
         field("email", "Email", kind="email", required=True, autocomplete="email", maxlength=254,
-              hint="Use the email of your CareerOS account. No account yet? Sign up in the app first."),
+              hint="Use the email of your Noetra account. No account yet? Sign up in the app first."),
         field("phone", "WhatsApp number", kind="tel", autocomplete="tel", maxlength=32),
         field("campus", "University or polytechnic", required=True, hint="For example: University of Lagos"),
         field("course", "Course"),
         field("year_of_study", "Level or year", maxlength=40, hint="For example: 300 level"),
-        field("reach", "How would you tell students about CareerOS?", rows=4, maxlength=600,
+        field("reach", "How would you tell students about Noetra Careers?", rows=4, maxlength=600,
               hint="Department groups, associations, events, social media: whatever you already do."),
     ])
     body = head + f"""
@@ -65,7 +65,7 @@ def ambassadors() -> str:
   <article class="prose prose-guide campus">
 <h2>What ambassadors do</h2>
 <ul>
-<li>Share CareerOS with classmates, departments and student associations on your campus.</li>
+<li>Share Noetra Careers with classmates, departments and student associations on your campus.</li>
 <li>Pass on scholarship deadlines and graduate trainee openings from the app to your groups.</li>
 <li>Show friends how to practise aptitude tests and check their CV before they apply.</li>
 </ul>
@@ -76,22 +76,22 @@ def ambassadors() -> str:
 <li>Credits unlock premium tools such as AI interview practice and optimized CV downloads. They can't be exchanged for cash.</li>
 </ul>
 <h2>Who can apply</h2>
-<p>Students at a university, polytechnic or college of education, with a CareerOS account. We review every application and reply by email.</p>
+<p>Students at a university, polytechnic or college of education, with a Noetra account. We review every application and reply by email.</p>
 <h2 id="apply">Apply</h2>
 {form("ambassador-applications", fields, "Send application", "We've received your application and will reply by email. Meanwhile, your invite code is ready in the app under Profile, then Invite & Earn.")}
   </article>
 </div>"""
-    return page(title="Become a CareerOS Campus Ambassador | CareerOS",
-                description="Share CareerOS on your campus and earn credits for every friend who joins. Apply to be a CareerOS campus ambassador.",
+    return page(title="Become a Noetra Campus Ambassador | Noetra Careers",
+                description="Share Noetra Careers on your campus and earn credits for every friend who joins. Apply to be a Noetra campus ambassador.",
                 path="campus/ambassadors.html", body=body, ld=[ld], depth=1)
 
 
 def sessions() -> str:
-    crumbs, ld = breadcrumbs([("CareerOS", ""), ("Free sessions", "campus/sessions.html")])
+    crumbs, ld = breadcrumbs([("Noetra Careers", ""), ("Free sessions", "campus/sessions.html")])
     head = band(crumbs + """
 <p class="band-eyebrow">For career centres and NYSC CDS groups</p>
 <h1>Free career sessions for your students or corps members</h1>
-<p class="band-sub">A free CareerOS session on winning scholarships, passing aptitude tests, or getting a CV and interview ready, for university career centres, NYSC CDS groups and student associations.</p>""")
+<p class="band-sub">A free Noetra Careers session on winning scholarships, passing aptitude tests, or getting a CV and interview ready, for university career centres, NYSC CDS groups and student associations.</p>""")
     fields = "".join([
         field("org_type", "Type of group", required=True, options=[
             ("CAREER_CENTRE", "University or polytechnic career centre"), ("NYSC_CDS", "NYSC CDS group"),
@@ -123,15 +123,15 @@ def sessions() -> str:
 <h2>How it works</h2>
 <ul>
 <li>Free of charge, about an hour, online or in person where we can reach you.</li>
-<li>Attendees get a sign-up code for your group, so they can keep practising in the CareerOS app afterwards.</li>
+<li>Attendees get a sign-up code for your group, so they can keep practising in the Noetra Careers app afterwards.</li>
 <li>Your group gets a printable flyer with a QR code to share before the session.</li>
 </ul>
 <h2 id="request">Request a session</h2>
 {form("partner-requests", fields, "Request a session", "We've received your request and will reply by email to agree a date.")}
   </article>
 </div>"""
-    return page(title="Free Career Sessions for Career Centres and NYSC CDS Groups | CareerOS",
-                description="Request a free CareerOS session on scholarships, aptitude tests, CVs and interviews for your students or corps members.",
+    return page(title="Free Career Sessions for Career Centres and NYSC CDS Groups | Noetra Careers",
+                description="Request a free Noetra Careers session on scholarships, aptitude tests, CVs and interviews for your students or corps members.",
                 path="campus/sessions.html", body=body, ld=[ld], depth=1)
 
 

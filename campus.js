@@ -1,4 +1,4 @@
-/* Campus forms (campus/ambassadors.html, campus/sessions.html): validate, post to the CareerOS API
+/* Campus forms (campus/ambassadors.html, campus/sessions.html): validate, post to the Noetra Careers API
    as text/plain JSON (no CORS preflight), show success or a clear error. */
 (function () {
   var API = location.hostname === 'pintinz.github.io'

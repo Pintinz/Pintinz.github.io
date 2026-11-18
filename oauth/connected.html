@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
-  <title>CareerOS</title>
+  <title>Noetra Careers</title>
   <link rel="icon" href="../assets/careeros-symbol.png">
   <style>
     body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #F5F7FB; color: #475569;
@@ -23,10 +23,10 @@
 </head>
 <body>
   <main>
-    <img class="logo" src="../assets/careeros-wordmark.png" alt="CareerOS">
+    <img class="logo" src="../assets/careeros-wordmark.png" alt="Noetra Careers">
     <div id="badge" class="badge muted" aria-hidden="true"></div>
-    <h1 id="title">Return to CareerOS</h1>
-    <p id="message">You can close this page and go back to the CareerOS app.</p>
+    <h1 id="title">Return to Noetra Careers</h1>
+    <p id="message">You can close this page and go back to the Noetra Careers app.</p>
     <p class="hint">You can close this window now.</p>
   </main>
   <script>
@@ -39,11 +39,11 @@
       var dash = '<svg viewBox="0 0 24 24"><path d="M6 12h12"/></svg>';
       var views = {
         connected: ["ok", check, name + " connected",
-          "CareerOS will now spot recruitment emails and suggest updates to applications you track. Return to the app to continue."],
+          "Noetra Careers will now spot recruitment emails and suggest updates to applications you track. Return to the app to continue."],
         cancelled: ["muted", dash, name + " not connected",
           "You chose not to give access. Nothing was connected. You can try again any time from Settings in the app."],
         failed: ["warn", cross, "We couldn't connect " + name,
-          "The link may have expired. Please return to the CareerOS app and try connecting again."]
+          "The link may have expired. Please return to the Noetra Careers app and try connecting again."]
       };
       var view = views[outcome];
       if (!view) return;
@@ -52,7 +52,7 @@
       badge.innerHTML = view[1];
       document.getElementById("title").textContent = view[2];
       document.getElementById("message").textContent = view[3];
-      document.title = view[2] + " | CareerOS";
+      document.title = view[2] + " | Noetra Careers";
     })();
   </script>
 </body>

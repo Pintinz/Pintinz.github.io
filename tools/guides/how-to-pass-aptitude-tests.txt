@@ -58,4 +58,4 @@ More in our guide to [numerical reasoning tests](numerical-reasoning-tips.html).
 - Have a calculator, pen and paper ready, and close other tabs and notifications.
 - Read the instructions for each section; some tests don't let you go back to earlier questions.
 
-> CareerOS has timed numerical, verbal and logical practice tests and tracks your accuracy and speed over time. Our questions are original and CareerOS is not affiliated with any test publisher or employer.
+> Noetra Careers has timed numerical, verbal and logical practice tests and tracks your accuracy and speed over time. Our questions are original and Noetra Careers is not affiliated with any test publisher or employer.

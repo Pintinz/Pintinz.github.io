@@ -5,7 +5,7 @@ updated: 2026-11-12
 
 Shell's Graduate Programme doesn't start with a classic pen-and-paper aptitude test. According to Shell's careers site, the first stage is a **Virtual Job Tryout** followed by a recorded **On-Demand Interview**, and the final stage is a virtual case study with two Shell employees. Here's what each stage involves and how to prepare.
 
-> CareerOS is not affiliated with Shell. Facts about the process below come from Shell's official careers site. Stages can differ by country and year, so always follow the instructions in your own invitation.
+> Noetra Careers is not affiliated with Shell. Facts about the process below come from Shell's official careers site. Stages can differ by country and year, so always follow the instructions in your own invitation.
 
 ## The official stages
 
@@ -30,7 +30,7 @@ Shell describes the Graduate Programme application process like this:
 
 ## Practice questions
 
-These are original CareerOS practice questions written for the skills each stage tests. They are **not** real Shell assessment content.
+These are original Noetra Careers practice questions written for the skills each stage tests. They are **not** real Shell assessment content.
 
 **1. Budget.** A project budget is $80,000. 35% has been spent on equipment and $18,000 on contractors. How much is left?
 
@@ -80,6 +80,6 @@ Shell runs graduate programmes in several countries. Search the Shell careers si
 
 ## Practise for the assessment
 
-> Practise recorded interview answers with the AI interviewer, and timed numerical and reasoning tests, in the [CareerOS app](https://play.google.com/store/apps/details?id=com.careeros.careeros&referrer=utm_source%3Dsite%26utm_medium%3Dguide%26utm_campaign%3Dshell_test). The app is free to download on Android.
+> Practise recorded interview answers with the AI interviewer, and timed numerical and reasoning tests, in the [Noetra Careers app](https://play.google.com/store/apps/details?id=com.careeros.careeros&referrer=utm_source%3Dsite%26utm_medium%3Dguide%26utm_campaign%3Dshell_test). The app is free to download on Android.
 
 Official source: [Shell Graduate Programme application process](https://www.shell.us/about-us/careers/candidate-resource-center/graduate-program-application-process.html).

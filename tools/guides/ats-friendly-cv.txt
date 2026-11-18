@@ -44,4 +44,4 @@ The second shows what you did and what it achieved. Start bullet points with an 
 - Make sure dates are consistent and there are no unexplained gaps.
 - Name the file clearly, for example *Firstname-Lastname-CV.pdf*.
 
-> CareerOS checks your CV against a job description and shows which keywords and sections to improve, so you can tailor it before you apply.
+> Noetra Careers checks your CV against a job description and shows which keywords and sections to improve, so you can tailor it before you apply.

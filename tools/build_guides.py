@@ -1,4 +1,4 @@
-"""Builds guides/*.html from tools/guides/*.txt (original CareerOS articles).
+"""Builds guides/*.html from tools/guides/*.txt (original Noetra Careers articles).
 
 Each .txt starts with `key: value` lines (title, description, eyebrow, updated), a blank line,
 then a small Markdown subset: `## heading`, paragraphs, `- ` and `1. ` lists, **bold**, *italic*,
@@ -19,7 +19,7 @@ from pathlib import Path
 from build_listings import ROOT, SITE, band, breadcrumbs, esc, page, slugify
 
 SOURCE = Path(__file__).resolve().parent / "guides"
-ORG = {"@type": "Organization", "name": "CareerOS", "url": f"{SITE}/", "logo": f"{SITE}/assets/careeros-symbol.png"}
+ORG = {"@type": "Organization", "name": "Noetra Careers", "url": f"{SITE}/", "logo": f"{SITE}/assets/careeros-symbol.png"}
 
 
 def inline(text: str) -> str:
@@ -118,7 +118,7 @@ def build(out: Path) -> int:
         old.unlink()
     for g in guides:
         path = f"guides/{g['slug']}.html"
-        crumb_html, crumb_ld = breadcrumbs([("CareerOS", ""), ("Guides", "guides/"), (g["title"], path)])
+        crumb_html, crumb_ld = breadcrumbs([("Noetra Careers", ""), ("Guides", "guides/"), (g["title"], path)])
         article_html, toc = render(g["body"])
         article = {
             "@context": "https://schema.org", "@type": "Article", "headline": g["title"], "description": g["description"],
@@ -141,7 +141,7 @@ def build(out: Path) -> int:
 <p class="band-eyebrow">{esc(g.get('eyebrow', 'Guide'))}</p>
 <h1>{esc(g['title'])}</h1>
 <p class="band-sub">{esc(g['description'])}</p>
-<p class="guide-meta"><span>By the CareerOS Team</span><span>Updated {esc(nice(g['updated']))}</span><span>{g['minutes']} min read</span></p>"""
+<p class="guide-meta"><span>By the Noetra Team</span><span>Updated {esc(nice(g['updated']))}</span><span>{g['minutes']} min read</span></p>"""
         body = f"""{band(head)}
 <div class="wrap layout layout-hub">
   <article class="prose prose-guide">
@@ -155,19 +155,19 @@ def build(out: Path) -> int:
 <div class="wrap"><section class="related"><div class="related-head"><h2>Read next</h2><a href="./">All guides</a></div>
 <ul class="guide-cards">{"".join(guide_card(o) for o in others)}</ul></section></div>"""
         (folder / f"{g['slug']}.html").write_text(
-            page(title=f"{g['title']} | CareerOS", description=g["description"], path=path, body=body,
+            page(title=f"{g['title']} | Noetra Careers", description=g["description"], path=path, body=body,
                  ld=ld, og_type="article"),
             encoding="utf-8",
         )
-    crumb_html, crumb_ld = breadcrumbs([("CareerOS", ""), ("Guides", "guides/")])
+    crumb_html, crumb_ld = breadcrumbs([("Noetra Careers", ""), ("Guides", "guides/")])
     head = f"""{crumb_html}
 <p class="band-eyebrow">{len(guides)} guides · free to read</p>
 <h1>Career guides</h1>
-<p class="band-sub">Practical, original advice on aptitude tests, interviews, CVs and scholarships, written by the CareerOS Team.</p>"""
+<p class="band-sub">Practical, original advice on aptitude tests, interviews, CVs and scholarships, written by the Noetra Team.</p>"""
     index = f"""{band(head)}
 <div class="wrap layout-hub"><ul class="guide-cards">{"".join(guide_card(g) for g in guides)}</ul></div>"""
     (folder / "index.html").write_text(
-        page(title="Career Guides: Aptitude Tests, Interviews, CVs and Scholarships | CareerOS",
+        page(title="Career Guides: Aptitude Tests, Interviews, CVs and Scholarships | Noetra Careers",
              description="Free, practical guides on passing aptitude tests, answering interview questions, writing an ATS-friendly CV and applying for scholarships.",
              path="guides/", body=index, ld=[crumb_ld]),
         encoding="utf-8",
@@ -180,7 +180,7 @@ def app_card_plain(slug: str) -> str:
     from build_listings import GOOGLE_PLAY_BADGE, campaign_for, play
     return f"""<aside class="side-card app-card">
   <img class="app-mark" src="../assets/careeros-symbol.png" alt="" width="40" height="40">
-  <h2>Practise it in CareerOS</h2>
+  <h2>Practise it in Noetra Careers</h2>
   <p>Timed aptitude tests, AI interview practice, CV checks and live jobs and scholarships. Free on Android.</p>
   <a class="play" href="{play(campaign_for(f'guides/{slug}.html'), 'card')}"><img src="{GOOGLE_PLAY_BADGE}" alt="Get it on Google Play" width="646" height="250" loading="lazy"></a>
 </aside>"""

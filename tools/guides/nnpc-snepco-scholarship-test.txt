@@ -5,7 +5,7 @@ updated: 2026-11-12
 
 The 2026 NNPC/SNEPCo National University Scholarship is run by Shell Nigeria Exploration and Production Company (SNEPCo) for itself, NNPC Limited and its co-venture partners. It pays a yearly grant from your second year until you finish your degree. Applications close on **30 November 2026**, and the next hurdle is a computer-based test. This guide covers what's officially known and how to prepare.
 
-> CareerOS is not affiliated with NNPC, SNEPCo or Scholastica. Every fact about the scheme below comes from the official advert on Scholastica. Confirm details there before you apply.
+> Noetra Careers is not affiliated with NNPC, SNEPCo or Scholastica. Every fact about the scheme below comes from the official advert on Scholastica. Confirm details there before you apply.
 
 ## Who can apply
 
@@ -41,7 +41,7 @@ Treat this as a sensible way to prepare, not a guarantee of the format. If your 
 
 ## Practice questions
 
-These are original CareerOS practice questions written in the style of a scholarship CBT. They are **not** past questions from the real test.
+These are original Noetra Careers practice questions written in the style of a scholarship CBT. They are **not** past questions from the real test.
 
 **1. Percentages.** A student's monthly allowance rises from ₦40,000 to ₦46,000. What is the percentage increase?
 
@@ -112,6 +112,6 @@ At least 3.5 on a 5-point scale (or the equivalent) to apply, and you must keep 
 
 ## Practise for the test
 
-> Practise timed numerical, verbal and logical reasoning tests in the [CareerOS app](https://play.google.com/store/apps/details?id=com.careeros.careeros&referrer=utm_source%3Dsite%26utm_medium%3Dguide%26utm_campaign%3Dsnepco_test). The app is free to download on Android and includes mock tests with answer explanations.
+> Practise timed numerical, verbal and logical reasoning tests in the [Noetra Careers app](https://play.google.com/store/apps/details?id=com.careeros.careeros&referrer=utm_source%3Dsite%26utm_medium%3Dguide%26utm_campaign%3Dsnepco_test). The app is free to download on Android and includes mock tests with answer explanations.
 
 Apply on the official portal: [candidate.scholastica.ng/schemes/NNPCLTDSNEPCo26](https://candidate.scholastica.ng/schemes/NNPCLTDSNEPCo26).

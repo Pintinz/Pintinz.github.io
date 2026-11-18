@@ -1,4 +1,4 @@
-"""Builds the public opportunity pages of pintinz.github.io from the live CareerOS API.
+"""Builds the public opportunity pages of pintinz.github.io from the live Noetra Careers API.
 
     python tools/build_listings.py                 # writes into the site folder this file lives in
     python tools/build_listings.py --out DIR       # writes into DIR (a copy of the site)
@@ -329,7 +329,7 @@ def page(*, title: str, description: str, path: str, body: str, ld: list[dict] |
 <meta name="theme-color" content="#0B1F33">
 <link rel="icon" href="{up}assets/careeros-symbol.png">
 <meta property="og:type" content="{og_type}">
-<meta property="og:site_name" content="CareerOS">
+<meta property="og:site_name" content="Noetra Careers">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(description)}">
 <meta property="og:url" content="{SITE}/{path}">
@@ -344,7 +344,7 @@ def page(*, title: str, description: str, path: str, body: str, ld: list[dict] |
 <a class="skip" href="#main">Skip to content</a>
 <header class="top">
   <div class="wrap top-inner">
-    <a class="top-brand" href="{up}" aria-label="CareerOS home"><img src="{up}assets/careeros-wordmark.png" alt="CareerOS" width="164" height="28"></a>
+    <a class="top-brand" href="{up}" aria-label="Noetra Careers home"><img src="{up}assets/careeros-wordmark.png" alt="Noetra Careers" width="143" height="28"></a>
     <nav class="top-nav" aria-label="Main">
       <a href="{up}jobs/">Jobs</a>
       <a href="{up}companies/">Companies</a>
@@ -360,14 +360,14 @@ def page(*, title: str, description: str, path: str, body: str, ld: list[dict] |
 </main>
 <div class="appbar" data-appbar hidden>
   <img src="{up}assets/careeros-symbol.png" alt="" width="36" height="36">
-  <p><strong>CareerOS</strong><span>Free on Android</span></p>
+  <p><strong>Noetra Careers</strong><span>Free on Android</span></p>
   <a class="appbar-cta" href="{play(campaign, 'bar')}">Get the app</a>
   <button type="button" class="appbar-close" data-appbar-close aria-label="Close">&times;</button>
 </div>
 <footer class="foot">
   <div class="wrap foot-grid">
     <div class="foot-brand">
-      <img src="{up}assets/careeros-wordmark-on-dark.png" alt="CareerOS" width="164" height="28" loading="lazy">
+      <img src="{up}assets/careeros-wordmark-on-dark.png" alt="Noetra Careers" width="143" height="28" loading="lazy">
       <p>Jobs, scholarships and the preparation to land them. Free on Android.</p>
       <a href="{play(campaign, 'footer')}"><img class="foot-badge" src="{GOOGLE_PLAY_BADGE}" alt="Get it on Google Play" width="646" height="250" loading="lazy"></a>
     </div>
@@ -377,10 +377,10 @@ def page(*, title: str, description: str, path: str, body: str, ld: list[dict] |
     <nav aria-label="Guides"><h2>Guides</h2>
       <a href="{up}guides/how-to-pass-aptitude-tests.html">Aptitude tests</a><a href="{up}guides/graduate-trainee-interview-questions.html">Interview questions</a>
       <a href="{up}guides/ats-friendly-cv.html">ATS-friendly CV</a><a href="{up}guides/scholarship-application-tips.html">Scholarship applications</a><a href="{up}guides/nnpc-snepco-scholarship-test.html">Scholarship tests</a><a href="{up}guides/nnpc-aptitude-test.html">NNPC aptitude test</a></nav>
-    <nav aria-label="CareerOS"><h2>CareerOS</h2>
+    <nav aria-label="Noetra Careers"><h2>Noetra Careers</h2>
       <a href="{up}">About the app</a><a href="{WHATSAPP_CHANNEL}" target="_blank" rel="noopener">WhatsApp Channel</a><a href="{up}campus/ambassadors.html">Campus ambassadors</a><a href="{up}campus/sessions.html">Free sessions</a><a href="{up}privacy.html">Privacy</a><a href="{up}terms.html">Terms</a><a href="mailto:careeros.info@gmail.com">Contact</a><a href="#" class="consent-link" data-consent-settings hidden>Analytics choices</a></nav>
   </div>
-  <div class="wrap foot-base"><span>&copy; {year} CareerOS</span><span>CareerOS is not the employer or scholarship provider for listings shown here.</span></div>
+  <div class="wrap foot-base"><span>&copy; {year} Noetra Careers</span><span>Noetra Careers is not the employer or scholarship provider for listings shown here.</span></div>
 </footer>
 <script src="{up}site.js" defer></script>
 </body>
@@ -396,18 +396,18 @@ APP_FEATURES = (
 
 
 def get_app_band(campaign: str, up: str) -> str:
-    """'Get CareerOS on your phone' panel above the footer: QR to scan on desktop, Play badge everywhere."""
+    """'Get Noetra Careers on your phone' panel above the footer: QR to scan on desktop, Play badge everywhere."""
     features = "".join(f"<li><strong>{esc(t)}</strong><span>{esc(d)}</span></li>" for t, d in APP_FEATURES)
     return f"""<div class="wrap"><section class="getapp" aria-labelledby="getapp-title">
   <div class="getapp-text">
     <p class="getapp-eyebrow">Free on Android</p>
-    <h2 id="getapp-title">Get CareerOS on your phone</h2>
+    <h2 id="getapp-title">Get Noetra Careers on your phone</h2>
     <ul class="getapp-list">{features}</ul>
     <a class="getapp-badge" href="{play(campaign, 'band')}"><img src="{GOOGLE_PLAY_BADGE}" alt="Get it on Google Play" width="646" height="250" loading="lazy"></a>
-    <p class="getapp-channel">New jobs and scholarships every morning: <a href="{WHATSAPP_CHANNEL}" target="_blank" rel="noopener">follow CareerOS on WhatsApp</a></p>
+    <p class="getapp-channel">New jobs and scholarships every morning: <a href="{WHATSAPP_CHANNEL}" target="_blank" rel="noopener">follow Noetra Careers on WhatsApp</a></p>
   </div>
   <figure class="getapp-qr">
-    <img src="{up}assets/qr-site-play.svg" alt="QR code that opens CareerOS on Google Play" width="148" height="148" loading="lazy">
+    <img src="{up}assets/qr-site-play.svg" alt="QR code that opens Noetra Careers on Google Play" width="148" height="148" loading="lazy">
     <figcaption>Scan with your phone's camera</figcaption>
   </figure>
 </section></div>"""
@@ -440,7 +440,7 @@ def app_card(kind: str, slug: str, heading: str, text: str, up: str = "../") -> 
 
 def share_card(text: str, path: str) -> str:
     """'Share on WhatsApp': the friend gets this page (with its link preview), not a bare employer link."""
-    message = f"{text}\nSee it on CareerOS: {SITE}/{path}"
+    message = f"{text}\nSee it on Noetra Careers: {SITE}/{path}"
     return f"""<aside class="side-card share-card">
   <h2>Know someone who'd want this?</h2>
   <a class="btn btn-ghost" href="https://wa.me/?text={urllib.parse.quote(message, safe='')}" target="_blank" rel="noopener">Share on WhatsApp</a>
@@ -559,7 +559,7 @@ def job_page(job: dict, by_company: dict[str, list[dict]], by_country: dict[str,
     cslug = company_slug(company)
     where = job_location(job)
     country = job.get("country")
-    crumbs = [("CareerOS", ""), ("Jobs", "jobs/")]
+    crumbs = [("Noetra Careers", ""), ("Jobs", "jobs/")]
     if country:
         crumbs.append((f"Jobs in {country}", f"jobs/in-{slugify(country)}.html"))
     crumbs.append((job["title"], path))
@@ -612,7 +612,7 @@ def job_page(job: dict, by_company: dict[str, list[dict]], by_country: dict[str,
         sections.append(f'<h2>About {esc(cname)}</h2><p>{esc(company["description"])}</p>')
     source = job.get("source_attribution") or (f"{cname} careers site" if job.get("is_official_source") else None)
     sections.append(
-        f'<p class="fine">{"Source: " + esc(source) + ". " if source else ""}CareerOS is not the employer. '
+        f'<p class="fine">{"Source: " + esc(source) + ". " if source else ""}Noetra Careers is not the employer. '
         f"Apply through {esc(cname)}'s own site, and never pay anyone to be considered for a job.</p>"
     )
 
@@ -640,7 +640,7 @@ def job_page(job: dict, by_company: dict[str, list[dict]], by_country: dict[str,
   </article>
   <div class="side">
 {prep_card(job)}
-{app_card("jobs", job["slug"], "Track this application", "Save the role, get a reminder before it closes, and practise for the interview in CareerOS.")}
+{app_card("jobs", job["slug"], "Track this application", "Save the role, get a reminder before it closes, and practise for the interview in Noetra Careers.")}
 {share_card(f"{job['title']} at {company_of(job).get('name') or 'a company hiring now'}", path)}
   </div>
 </div>
@@ -650,7 +650,7 @@ def job_page(job: dict, by_company: dict[str, list[dict]], by_country: dict[str,
     posting = job_posting_ld(job, url)
     if posting:
         ld.append(posting)
-    title = f"{job['title']} at {cname}" + (f", {where}" if where else "") + " | CareerOS"
+    title = f"{job['title']} at {cname}" + (f", {where}" if where else "") + " | Noetra Careers"
     summary = plain(job.get("short_summary") or job.get("description"), 120)
     when = f" {label}." if job.get("application_deadline") else ""
     desc = (f"{kind} at {cname}{(' in ' + where) if where else ''}.{when} {summary}").strip()[:300]
@@ -663,7 +663,7 @@ def stat(value, label: str) -> str:
 
 def country_page(country: str, jobs: list[dict]) -> str:
     path = f"jobs/in-{slugify(country)}.html"
-    crumb_html, crumb_ld = breadcrumbs([("CareerOS", ""), ("Jobs", "jobs/"), (f"Jobs in {country}", path)])
+    crumb_html, crumb_ld = breadcrumbs([("Noetra Careers", ""), ("Jobs", "jobs/"), (f"Jobs in {country}", path)])
     companies = Counter(company_of(j).get("name") for j in jobs if company_of(j).get("name"))
     closing = sorted((j for j in jobs if (days_left(j.get("application_deadline")) or 99) <= 14 and days_left(j.get("application_deadline")) is not None),
                      key=lambda j: days_left(j.get("application_deadline")))
@@ -695,7 +695,7 @@ def country_page(country: str, jobs: list[dict]) -> str:
 </div>"""
     top = ", ".join(n for n, _ in companies.most_common(3))
     return page(
-        title=f"Jobs in {country}: {len(jobs)} open roles | CareerOS",
+        title=f"Jobs in {country}: {len(jobs)} open roles | Noetra Careers",
         description=plain(f"{len(jobs)} open jobs in {country} from {len(companies)} employers' career sites, including {top}. "
                           f"Graduate programmes, internships and experienced roles, updated daily."),
         path=path, body=body, ld=[crumb_ld],
@@ -703,7 +703,7 @@ def country_page(country: str, jobs: list[dict]) -> str:
 
 
 def jobs_index(jobs: list[dict], countries: dict[str, list[dict]], companies: dict[str, list[dict]]) -> str:
-    crumb_html, crumb_ld = breadcrumbs([("CareerOS", ""), ("Jobs", "jobs/")])
+    crumb_html, crumb_ld = breadcrumbs([("Noetra Careers", ""), ("Jobs", "jobs/")])
     ordered = sorted(countries.items(), key=lambda kv: (kv[0] != FOCUS_COUNTRY, -len(kv[1]), kv[0]))
     featured = "".join(
         f'<li><a class="tile" href="in-{slugify(c)}.html"><span class="tile-name">{esc(c)}</span>'
@@ -722,7 +722,7 @@ def jobs_index(jobs: list[dict], countries: dict[str, list[dict]], companies: di
 <section class="block"><h2>Newest roles</h2><ul class="rows">{"".join(job_row(j) for j in jobs[:40])}</ul></section>
 </div>"""
     return page(
-        title="Jobs, Graduate Programmes and Internships | CareerOS",
+        title="Jobs, Graduate Programmes and Internships | Noetra Careers",
         description=f"{len(jobs)} open jobs from {len(companies)} employers in {len(countries)} countries, including graduate programmes and internships. Updated daily.",
         path="jobs/", body=body, ld=[crumb_ld],
     )
@@ -734,7 +734,7 @@ def company_page(company: dict, jobs: list[dict]) -> str:
     slug = company_slug(company)
     path = f"companies/{slug}.html"
     name = company.get("name") or "Company"
-    crumb_html, crumb_ld = breadcrumbs([("CareerOS", ""), ("Companies", "companies/"), (name, path)])
+    crumb_html, crumb_ld = breadcrumbs([("Noetra Careers", ""), ("Companies", "companies/"), (name, path)])
     countries = Counter(j.get("country") for j in jobs if j.get("country"))
     early = sum(1 for j in jobs if is_early_career(j))
     head = f"""{crumb_html}
@@ -773,7 +773,7 @@ def company_page(company: dict, jobs: list[dict]) -> str:
         org_ld["logo"] = company["logo_url"]
     where = ", ".join(c for c, _ in countries.most_common(3))
     return page(
-        title=f"{name} Jobs and Careers: {len(jobs)} open roles | CareerOS",
+        title=f"{name} Jobs and Careers: {len(jobs)} open roles | Noetra Careers",
         description=plain(f"{len(jobs)} open {name} jobs{(' in ' + where) if where else ''}. "
                           f"{company.get('description') or 'Roles listed from the company careers site, updated daily.'}"),
         path=path, body=body, ld=[crumb_ld, org_ld],
@@ -781,7 +781,7 @@ def company_page(company: dict, jobs: list[dict]) -> str:
 
 
 def companies_index(companies: dict[str, list[dict]], info: dict[str, dict]) -> str:
-    crumb_html, crumb_ld = breadcrumbs([("CareerOS", ""), ("Companies", "companies/")])
+    crumb_html, crumb_ld = breadcrumbs([("Noetra Careers", ""), ("Companies", "companies/")])
     ordered = sorted(companies.items(), key=lambda kv: (-len(kv[1]), (info[kv[0]].get("name") or "").lower()))
     items = "".join(
         f'<li><a class="row" href="{slug}.html">{logo_tile(info[slug], "sm")}<span class="row-text">'
@@ -796,7 +796,7 @@ def companies_index(companies: dict[str, list[dict]], info: dict[str, dict]) -> 
 <p class="band-sub">{len(companies)} employers with open roles, listed from their own careers sites.</p>"""
     body = f'{band(head)}<div class="wrap"><section class="block"><ul class="rows rows-grid">{items}</ul></section></div>'
     return page(
-        title=f"Companies Hiring Now: {len(companies)} employers | CareerOS",
+        title=f"Companies Hiring Now: {len(companies)} employers | Noetra Careers",
         description=f"{len(companies)} companies with open jobs, graduate programmes and internships, listed from their own careers sites and updated daily.",
         path="companies/", body=body, ld=[crumb_ld],
     )
@@ -804,7 +804,7 @@ def companies_index(companies: dict[str, list[dict]], info: dict[str, dict]) -> 
 
 # --------------------------------------------------------------------------------------- scholarships
 
-# Scholarships with a selection test and a CareerOS prep guide (slug fragment → guide, link text).
+# Scholarships with a selection test and a Noetra Careers prep guide (slug fragment → guide, link text).
 # Company slug (or slug prefix before "-") → its recruitment-test guide.
 COMPANY_TEST_GUIDES = {
     "nnpc": ("nnpc-aptitude-test", "NNPC aptitude test: stages and practice"),
@@ -821,7 +821,7 @@ TEST_GUIDES = {
 def scholarship_page(s: dict, others: list[dict]) -> str:
     slug = safe_slug(s["slug"])
     path = f"scholarships/{slug}.html"
-    crumb_html, crumb_ld = breadcrumbs([("CareerOS", ""), ("Scholarships", "scholarships/"), (s["name"], path)])
+    crumb_html, crumb_ld = breadcrumbs([("Noetra Careers", ""), ("Scholarships", "scholarships/"), (s["name"], path)])
     provider = {"name": s.get("organization") or s["name"], "logo_url": s.get("thumbnail_url")}
     label, tone = countdown(s.get("application_deadline"))
     deadline = nice_date(s.get("application_deadline"))
@@ -860,7 +860,7 @@ def scholarship_page(s: dict, others: list[dict]) -> str:
         block = list_html(s.get(key))
         if block:
             sections.append(f"<h2>{heading}</h2>\n{block}")
-    sections.append('<p class="fine">Confirm every detail and deadline on the official page. CareerOS is not the scholarship provider, '
+    sections.append('<p class="fine">Confirm every detail and deadline on the official page. Noetra Careers is not the scholarship provider, '
                     "and genuine scholarships never ask you to pay to receive an award.</p>")
     test_guide = next((g for key, g in TEST_GUIDES.items() if key in slug), None)
     test_link = f'<li><a href="../guides/{test_guide[0]}.html">{esc(test_guide[1])}</a></li>' if test_guide else ""
@@ -881,11 +881,11 @@ def scholarship_page(s: dict, others: list[dict]) -> str:
 {ticket}
 <div class="layout">
   <article class="prose">{chr(10).join(sections)}</article>
-  <div class="side">{prep}{app_card("scholarships", s["slug"], "Never miss the deadline", "Save it in CareerOS to get reminders and track your application.")}{share_card(s["name"], path)}</div>
+  <div class="side">{prep}{app_card("scholarships", s["slug"], "Never miss the deadline", "Save it in Noetra Careers to get reminders and track your application.")}{share_card(s["name"], path)}</div>
 </div>
 {related}
 </div>"""
-    title = s["name"] + (f" ({s['country']})" if s.get("country") else "") + " | CareerOS"
+    title = s["name"] + (f" ({s['country']})" if s.get("country") else "") + " | Noetra Careers"
     desc = plain(f"{FUNDING_LABELS.get(s.get('funding_type'), 'Scholarship')}{(' to study in ' + s['country']) if s.get('country') else ''}. "
                  f"{label}. {s.get('summary') or plain(s.get('description'), 100)}", 158)
     return page(title=title, description=desc, path=path, body=body, ld=[crumb_ld])
@@ -898,7 +898,7 @@ def scholarship_row(s: dict) -> str:
 
 
 def scholarships_index(items: list[dict]) -> str:
-    crumb_html, crumb_ld = breadcrumbs([("CareerOS", ""), ("Scholarships", "scholarships/")])
+    crumb_html, crumb_ld = breadcrumbs([("Noetra Careers", ""), ("Scholarships", "scholarships/")])
     ordered = sorted(items, key=lambda s: (days_left(s.get("application_deadline")) is None, days_left(s.get("application_deadline")) or 0))
     full = sum(1 for s in items if s.get("funding_type") == "FULL")
     head = f"""{crumb_html}
@@ -913,7 +913,7 @@ def scholarships_index(items: list[dict]) -> str:
   <ul class="link-list"><li><a href="../guides/scholarship-application-tips.html">Step-by-step application guide</a></li></ul></aside></div>
 </div>"""
     return page(
-        title="Scholarships Open Now: Fully and Partially Funded | CareerOS",
+        title="Scholarships Open Now: Fully and Partially Funded | Noetra Careers",
         description=f"{len(items)} open scholarships for undergraduate, master's and PhD study, with eligibility, funding and official application links. Updated daily.",
         path="scholarships/", body=body, ld=[crumb_ld],
     )
