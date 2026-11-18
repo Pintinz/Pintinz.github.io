@@ -19,7 +19,7 @@ from pathlib import Path
 from build_listings import ROOT, SITE, band, breadcrumbs, esc, page, slugify
 
 SOURCE = Path(__file__).resolve().parent / "guides"
-ORG = {"@type": "Organization", "name": "Noetra Careers", "url": f"{SITE}/", "logo": f"{SITE}/assets/careeros-symbol.png"}
+ORG = {"@type": "Organization", "name": "Noetra Careers", "url": f"{SITE}/", "logo": f"{SITE}/assets/noetra-favicon-192.png"}
 
 
 def inline(text: str) -> str:

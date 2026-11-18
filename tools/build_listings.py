@@ -8,7 +8,8 @@ Writes, and fully replaces each run:
 - jobs/index.html, jobs/in-<country>.html, jobs/<slug>.html
 - companies/index.html, companies/<slug>.html
 - scholarships/index.html, scholarships/<slug>.html
-- sitemap.xml (static pages + guides + every generated page)
+- sitemap.xml: a sitemap index pointing at one sitemap per section (pages, guides, jobs,
+  job locations, companies, scholarships), so Search Console reports each section separately
 
 Only live listings the API publicly lists are written; a listing that closes disappears on the next
 run. Job pages carry schema.org JobPosting markup for Google for Jobs, built only from real fields
@@ -327,7 +328,8 @@ def page(*, title: str, description: str, path: str, body: str, ld: list[dict] |
 <meta name="description" content="{esc(description)}">
 <link rel="canonical" href="{SITE}/{path}">
 <meta name="theme-color" content="#0B1F33">
-<link rel="icon" href="{up}assets/careeros-symbol.png">
+<link rel="icon" href="{up}favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="192x192" href="{up}assets/noetra-favicon-192.png">
 <meta property="og:type" content="{og_type}">
 <meta property="og:site_name" content="Noetra Careers">
 <meta property="og:title" content="{esc(title)}">
@@ -921,14 +923,53 @@ def scholarships_index(items: list[dict]) -> str:
 
 # --------------------------------------------------------------------------------------- sitemap & build
 
-def sitemap(out: Path, urls: list[tuple[str, str | None]]) -> None:
+# One child sitemap per section, in this order (Search Console lists and reports each one).
+SITEMAP_SECTIONS = ("pages", "guides", "jobs", "job-locations", "companies", "scholarships")
+SITEMAP_MAX_URLS = 10_000  # well under the protocol's 50,000; a bigger section splits into -2, -3…
+
+
+def sitemap_section(url: str) -> str:
+    if url.startswith("guides/"):
+        return "guides"
+    if url.startswith("jobs/in-"):
+        return "job-locations"
+    if url.startswith("jobs/") and url != "jobs/":
+        return "jobs"
+    if url.startswith("companies/") and url != "companies/":
+        return "companies"
+    if url.startswith("scholarships/") and url != "scholarships/":
+        return "scholarships"
+    return "pages"  # home, the section hubs, legal, campus
+
+
+def sitemap(out: Path, urls: list[tuple[str, str | None]]) -> list[str]:
+    """Writes sitemap.xml as a sitemap index plus sitemap-<section>.xml files. Returns the child names."""
     unique = dict(reversed(urls))  # one entry per URL (first one wins); duplicates make Search Console warn
-    rows = "".join(f"  <url><loc>{esc(SITE + '/' + u)}</loc>{f'<lastmod>{m}</lastmod>' if m else ''}</url>\n"
-                   for u, m in reversed(unique.items()))
+    groups: dict[str, list[tuple[str, str | None]]] = {s: [] for s in SITEMAP_SECTIONS}
+    for u, m in reversed(unique.items()):
+        groups[sitemap_section(u)].append((u, m))
+    for old in out.glob("sitemap-*.xml"):
+        old.unlink()
+    children: list[tuple[str, str | None]] = []
+    for section, rows in groups.items():
+        for part in range(0, max(len(rows), 1), SITEMAP_MAX_URLS):
+            chunk = rows[part:part + SITEMAP_MAX_URLS]
+            if not chunk:
+                continue
+            name = f"sitemap-{section}.xml" if part == 0 else f"sitemap-{section}-{part // SITEMAP_MAX_URLS + 1}.xml"
+            body = "".join(f"  <url><loc>{esc(SITE + '/' + u)}</loc>{f'<lastmod>{m}</lastmod>' if m else ''}</url>\n" for u, m in chunk)
+            (out / name).write_text(
+                f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{body}</urlset>\n',
+                encoding="utf-8",
+            )
+            dates = [m for _, m in chunk if m]
+            children.append((name, max(dates) if dates else None))
+    index = "".join(f"  <sitemap><loc>{SITE}/{n}</loc>{f'<lastmod>{m}</lastmod>' if m else ''}</sitemap>\n" for n, m in children)
     (out / "sitemap.xml").write_text(
-        f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{rows}</urlset>\n',
+        f'<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{index}</sitemapindex>\n',
         encoding="utf-8",
     )
+    return [n for n, _ in children]
 
 
 def build(out: Path, jobs: list[dict], scholarships: list[dict]) -> dict:
@@ -966,18 +1007,24 @@ def build(out: Path, jobs: list[dict], scholarships: list[dict]) -> dict:
         by_company.setdefault(cslug, []).append(job)
         company_info.setdefault(cslug, company_of(job))
 
+    def job_day(job: dict) -> str:
+        return (parse_dt(job.get("published_at")) or datetime.now(timezone.utc)).date().isoformat()
+
+    def newest(rows: list[dict]) -> str | None:
+        return max((job_day(j) for j in rows), default=None)
+
     for job in jobs:
         name = f"{safe_slug(job['slug'])}.html"
         (out / "jobs" / name).write_text(job_page(job, by_company, by_country), encoding="utf-8")
-        urls.append((f"jobs/{name}", (parse_dt(job.get("published_at")) or datetime.now(timezone.utc)).date().isoformat()))
+        urls.append((f"jobs/{name}", job_day(job)))
     for country, rows in by_country.items():
         (out / "jobs" / f"in-{slugify(country)}.html").write_text(country_page(country, rows), encoding="utf-8")
-        urls.append((f"jobs/in-{slugify(country)}.html", today))
+        urls.append((f"jobs/in-{slugify(country)}.html", newest(rows)))
     (out / "jobs" / "index.html").write_text(jobs_index(jobs, by_country, by_company), encoding="utf-8")
 
     for cslug, rows in by_company.items():
         (out / "companies" / f"{cslug}.html").write_text(company_page(company_info[cslug], rows), encoding="utf-8")
-        urls.append((f"companies/{cslug}.html", today))
+        urls.append((f"companies/{cslug}.html", newest(rows)))
     (out / "companies" / "index.html").write_text(companies_index(by_company, company_info), encoding="utf-8")
 
     for s in scholarships:
@@ -986,8 +1033,16 @@ def build(out: Path, jobs: list[dict], scholarships: list[dict]) -> dict:
         urls.append((f"scholarships/{name}", (parse_dt(s.get("published_at")) or datetime.now(timezone.utc)).date().isoformat()))
     (out / "scholarships" / "index.html").write_text(scholarships_index(scholarships), encoding="utf-8")
 
-    sitemap(out, urls)
-    return {"jobs": len(jobs), "countries": len(by_country), "companies": len(by_company), "scholarships": len(scholarships), "urls": len(urls)}
+    newest_job = newest(jobs)
+    newest_scholarship = max(
+        ((parse_dt(s.get("published_at")) or datetime.now(timezone.utc)).date().isoformat() for s in scholarships), default=None
+    )
+    hub_dates = {"": max(filter(None, [newest_job, newest_scholarship]), default=today), "jobs/": newest_job,
+                 "companies/": newest_job, "scholarships/": newest_scholarship}
+    urls = [(u, hub_dates.get(u, m)) if u in hub_dates else (u, m) for u, m in urls]
+    files = sitemap(out, urls)
+    return {"jobs": len(jobs), "countries": len(by_country), "companies": len(by_company), "scholarships": len(scholarships),
+            "urls": len(urls), "sitemaps": files}
 
 
 def main() -> None:
