@@ -47,12 +47,12 @@ def ambassadors() -> str:
     crumbs, ld = breadcrumbs([("Noetra Careers", ""), ("Campus ambassadors", "campus/ambassadors.html")])
     head = band(crumbs + """
 <p class="band-eyebrow">Campus ambassadors</p>
-<h1>Become a Noetra campus ambassador</h1>
-<p class="band-sub">Help students on your campus find real jobs and scholarships and prepare for aptitude tests and interviews, and earn Noetra credits for every friend who joins.</p>""")
+<h1>Become a Noetra Careers campus ambassador</h1>
+<p class="band-sub">Help students on your campus find real jobs and scholarships and prepare for aptitude tests and interviews, and earn Noetra Careers credits for every friend who joins.</p>""")
     fields = "".join([
         field("full_name", "Full name", required=True, autocomplete="name", maxlength=120),
         field("email", "Email", kind="email", required=True, autocomplete="email", maxlength=254,
-              hint="Use the email of your Noetra account. No account yet? Sign up in the app first."),
+              hint="Use the email of your Noetra Careers account. No account yet? Sign up in the app first."),
         field("phone", "WhatsApp number", kind="tel", autocomplete="tel", maxlength=32),
         field("campus", "University or polytechnic", required=True, hint="For example: University of Lagos"),
         field("course", "Course"),
@@ -76,13 +76,13 @@ def ambassadors() -> str:
 <li>Credits unlock premium tools such as AI interview practice and optimized CV downloads. They can't be exchanged for cash.</li>
 </ul>
 <h2>Who can apply</h2>
-<p>Students at a university, polytechnic or college of education, with a Noetra account. We review every application and reply by email.</p>
+<p>Students at a university, polytechnic or college of education, with a Noetra Careers account. We review every application and reply by email.</p>
 <h2 id="apply">Apply</h2>
 {form("ambassador-applications", fields, "Send application", "We've received your application and will reply by email. Meanwhile, your invite code is ready in the app under Profile, then Invite & Earn.")}
   </article>
 </div>"""
-    return page(title="Become a Noetra Campus Ambassador | Noetra Careers",
-                description="Share Noetra Careers on your campus and earn credits for every friend who joins. Apply to be a Noetra campus ambassador.",
+    return page(title="Become a Noetra Careers Campus Ambassador | Noetra Careers",
+                description="Share Noetra Careers on your campus and earn credits for every friend who joins. Apply to be a Noetra Careers campus ambassador.",
                 path="campus/ambassadors.html", body=body, ld=[ld], depth=1)
 
 

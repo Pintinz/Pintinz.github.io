@@ -141,7 +141,7 @@ def build(out: Path) -> int:
 <p class="band-eyebrow">{esc(g.get('eyebrow', 'Guide'))}</p>
 <h1>{esc(g['title'])}</h1>
 <p class="band-sub">{esc(g['description'])}</p>
-<p class="guide-meta"><span>By the Noetra Team</span><span>Updated {esc(nice(g['updated']))}</span><span>{g['minutes']} min read</span></p>"""
+<p class="guide-meta"><span>By the Noetra Careers Team</span><span>Updated {esc(nice(g['updated']))}</span><span>{g['minutes']} min read</span></p>"""
         body = f"""{band(head)}
 <div class="wrap layout layout-hub">
   <article class="prose prose-guide">
@@ -163,7 +163,7 @@ def build(out: Path) -> int:
     head = f"""{crumb_html}
 <p class="band-eyebrow">{len(guides)} guides · free to read</p>
 <h1>Career guides</h1>
-<p class="band-sub">Practical, original advice on aptitude tests, interviews, CVs and scholarships, written by the Noetra Team.</p>"""
+<p class="band-sub">Practical, original advice on aptitude tests, interviews, CVs and scholarships, written by the Noetra Careers Team.</p>"""
     index = f"""{band(head)}
 <div class="wrap layout-hub"><ul class="guide-cards">{"".join(guide_card(g) for g in guides)}</ul></div>"""
     (folder / "index.html").write_text(

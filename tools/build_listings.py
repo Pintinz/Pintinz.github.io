@@ -352,6 +352,8 @@ def page(*, title: str, description: str, path: str, body: str, ld: list[dict] |
       <a href="{up}companies/">Companies</a>
       <a href="{up}scholarships/">Scholarships</a>
       <a href="{up}guides/">Guides</a>
+      <a href="{up}about.html">About</a>
+      <a href="{up}contact.html">Contact</a>
     </nav>
     <a class="top-cta" href="{play(campaign, 'header')}">Get the app</a>
   </div>
@@ -380,7 +382,7 @@ def page(*, title: str, description: str, path: str, body: str, ld: list[dict] |
       <a href="{up}guides/how-to-pass-aptitude-tests.html">Aptitude tests</a><a href="{up}guides/graduate-trainee-interview-questions.html">Interview questions</a>
       <a href="{up}guides/ats-friendly-cv.html">ATS-friendly CV</a><a href="{up}guides/scholarship-application-tips.html">Scholarship applications</a><a href="{up}guides/nnpc-snepco-scholarship-test.html">Scholarship tests</a><a href="{up}guides/nnpc-aptitude-test.html">NNPC aptitude test</a></nav>
     <nav aria-label="Noetra Careers"><h2>Noetra Careers</h2>
-      <a href="{up}">About the app</a><a href="{WHATSAPP_CHANNEL}" target="_blank" rel="noopener">WhatsApp Channel</a><a href="{up}campus/ambassadors.html">Campus ambassadors</a><a href="{up}campus/sessions.html">Free sessions</a><a href="{up}privacy.html">Privacy</a><a href="{up}terms.html">Terms</a><a href="mailto:careeros.info@gmail.com">Contact</a><a href="#" class="consent-link" data-consent-settings hidden>Analytics choices</a></nav>
+      <a href="{up}about.html">About Noetra Careers</a><a href="{WHATSAPP_CHANNEL}" target="_blank" rel="noopener">WhatsApp Channel</a><a href="https://x.com/NoetraCareers" target="_blank" rel="noopener">X (@NoetraCareers)</a><a href="{up}campus/ambassadors.html">Campus ambassadors</a><a href="{up}campus/sessions.html">Free sessions</a><a href="{up}privacy.html">Privacy</a><a href="{up}terms.html">Terms</a><a href="{up}contact.html">Contact</a><a href="#" class="consent-link" data-consent-settings hidden>Analytics choices</a></nav>
   </div>
   <div class="wrap foot-base"><span>&copy; {year} Noetra Careers</span><span>Noetra Careers is not the employer or scholarship provider for listings shown here.</span></div>
 </footer>
@@ -979,7 +981,7 @@ def build(out: Path, jobs: list[dict], scholarships: list[dict]) -> dict:
         (out / folder).mkdir(parents=True)
 
     urls: list[tuple[str, str | None]] = [("", today), ("jobs/", today), ("companies/", today), ("scholarships/", today)]
-    for static in ("privacy.html", "terms.html", "refund.html"):
+    for static in ("about.html", "contact.html", "privacy.html", "terms.html", "refund.html"):
         if (out / static).exists():
             urls.append((static, None))
     campus = out / "campus"

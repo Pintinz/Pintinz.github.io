@@ -74,7 +74,7 @@
   update();
 })();
 
-// Website analytics (first-party, Noetra's own server; no third-party scripts).
+// Website analytics (first-party, Noetra Careers' own server; no third-party scripts).
 // - Asks once. "Accept" keeps a random visitor id in this browser so return visits join up;
 //   "Decline" (or Global Privacy Control) keeps nothing, and page views are counted with no identifier.
 // - Sends: the page, its title, how long it was visible, links clicked to other sites, and on a new
